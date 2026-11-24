@@ -57,7 +57,9 @@ a:hover { color: #8a2a9c; }
 .side-deadline span { display: block; font-size: .75rem; color: #b9a3c8; }
 
 .main-col { min-width: 0; display: flex; flex-direction: column; }
-main { flex: 1; width: 100%; max-width: 50rem; padding: 3rem 3.5rem 4rem; }
+main { flex: 1; width: 100%; max-width: 76rem; margin: 0 auto; padding: 3rem 3.5rem 4rem; }
+/* Running text keeps a readable line length, the program and the cards use the full width */
+.page > p, .page > ul, .page > ol, .page > blockquote, .page > h2, .page > h3, .news-item p, .notice, .proceedings { max-width: 46rem; }
 
 /* Type */
 h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -.01em; }
@@ -132,7 +134,11 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .slot { margin: .5rem 0; padding: .4rem 1.25rem; color: var(--muted); font-size: .92rem; }
 .slot .time { display: inline-block; min-width: 7rem; font-variant-numeric: tabular-nums; }
 .papers { list-style: none; padding: 0; margin: .9rem 0 0; }
-.paper { padding: .7rem 0; border-top: 1px solid var(--rule); margin: 0; }
+.paper { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 2rem; padding: .75rem 0; border-top: 1px solid var(--rule); margin: 0; }
+.paper > * { grid-column: 1; }
+/* PDF, slides and video sit in a column on the right of each paper */
+.paper > .links { grid-column: 2; grid-row: 1 / span 3; align-self: start; flex-wrap: nowrap; margin: .1rem 0 0; }
+.paper > .links a { min-width: 3.4rem; text-align: center; }
 .paper-title { margin: 0; font-weight: 600; }
 .paper-title a { color: var(--ink); text-decoration: none; }
 .paper-title a:hover { color: var(--purple); text-decoration: underline; }
@@ -147,7 +153,7 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .abstract p { font-size: .95rem; }
 
 /* Footer */
-.site-footer { max-width: 50rem; padding: 1.5rem 3.5rem 2.5rem; border-top: 1px solid var(--rule); font-size: .85rem; color: var(--muted); }
+.site-footer { width: 100%; max-width: 76rem; margin: 0 auto; padding: 1.5rem 3.5rem 2.5rem; border-top: 1px solid var(--rule); font-size: .85rem; color: var(--muted); }
 .site-footer p { margin: 0 0 .3rem; }
 .site-footer a { color: inherit; }
 
@@ -169,6 +175,8 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
   .site-nav a[aria-current] { background: var(--yellow); border-color: var(--yellow); color: var(--purple-dark); font-weight: 600; }
   .side-edition { display: none; }
   main { padding: 2rem 1.25rem 3rem; }
+  .paper { display: block; }
+  .paper > .links { margin: .45rem 0 0; }
   .site-footer { padding: 1.5rem 1.25rem 2rem; }
   .hero h1 { font-size: 2.2rem; }
 }
