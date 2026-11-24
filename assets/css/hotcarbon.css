@@ -1,0 +1,163 @@
+/* HotCarbon, design 1: "Proceedings"
+   A quiet, typographic page in the tradition of a printed workshop program.
+   Serif text, one purple, thin rules. No web fonts, no JavaScript. */
+
+:root {
+  --paper: #fffdf9;
+  --ink: #221a2b;
+  --muted: #6b6275;
+  --rule: #e6dfe9;
+  --purple: #521477;
+  --purple-soft: #f4eef8;
+  --accent: #8a2a9c;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --measure: 44rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.65 var(--serif);
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1.5rem; }
+
+a { color: var(--purple); text-decoration-thickness: 1px; text-underline-offset: .15em; }
+a:hover { color: var(--accent); }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem; }
+
+/* Header */
+.site-header { padding: 2.5rem 0 0; }
+.brand { display: flex; align-items: center; gap: .9rem; color: var(--ink); text-decoration: none; }
+.brand .logo { width: 2.75rem; height: 2.75rem; color: var(--purple); flex: none; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-name { font-size: 1.6rem; font-weight: 700; letter-spacing: .01em; }
+.brand-sub { font-style: italic; color: var(--muted); }
+
+.site-nav {
+  display: flex; flex-wrap: wrap; gap: .25rem 1.4rem;
+  margin-top: 1.5rem; padding: .6rem 0;
+  border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule);
+  font: 600 .8rem/1.6 var(--sans); letter-spacing: .08em; text-transform: uppercase;
+}
+.site-nav a { color: var(--ink); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current] { color: var(--purple); }
+.site-nav a[aria-current] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
+
+main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
+.layout-home .hero .eyebrow { display: none; }
+
+/* Type */
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+h1 { font-size: 2.25rem; margin: 0 0 .5rem; }
+h2 { font-size: 1.45rem; margin: 2.75rem 0 1rem; padding-bottom: .35rem; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.15rem; margin: 2rem 0 .75rem; }
+h4 { font-size: 1.05rem; margin: 0; }
+p, ul, ol, dl { margin: 0 0 1rem; }
+ul, ol { padding-left: 1.4rem; }
+li { margin-bottom: .2rem; }
+code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; border-radius: 3px; }
+blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.muted, .affiliation { color: var(--muted); }
+
+.eyebrow { margin: 0 0 .4rem; font: 600 .78rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.eyebrow a { color: inherit; text-decoration: none; }
+.subtitle { font-size: 1.2rem; font-style: italic; color: var(--muted); margin: 0; }
+
+.page-head { margin-bottom: 2rem; }
+.subnav { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: 1.25rem; font: .95rem var(--sans); }
+.subnav a { text-decoration: none; padding-bottom: .15rem; border-bottom: 2px solid transparent; }
+.subnav a[aria-current] { color: var(--ink); border-color: var(--purple); }
+
+/* Notices (also used by kramdown classes in news posts) */
+.notice, .notice--warning, .notice--primary, .notice--info {
+  padding: .8rem 1rem; background: var(--purple-soft); border-left: 3px solid var(--purple); font-size: .97rem;
+}
+
+/* Buttons */
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.25rem 0; }
+.button {
+  display: inline-block; padding: .45rem 1rem; border: 1px solid var(--purple); border-radius: 2px;
+  font: 600 .85rem/1.4 var(--sans); text-decoration: none; color: var(--purple);
+}
+.button:hover { background: var(--purple); color: var(--paper); }
+
+/* Key facts */
+.facts { display: grid; grid-template-columns: max-content 1fr; margin: 0 0 1rem; border-top: 1px solid var(--rule); }
+.facts > div { display: contents; }
+.facts dt, .facts dd { padding: .45rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.facts dt { padding-right: 2rem; font: 600 .8rem/2 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.proceedings { font-style: italic; color: var(--muted); }
+
+/* Home */
+.hero { padding: 1rem 0 1.5rem; }
+.hero h1 { font-size: 3rem; margin-bottom: .75rem; }
+.hero .lead p { font-size: 1.25rem; line-height: 1.55; }
+.current { padding: 1.5rem 1.75rem; border: 1px solid var(--rule); background: #fff; margin: 1rem 0 0; }
+.current h2 { margin-top: 0; border: 0; padding: 0; }
+.current .more { margin: 0; }
+.news-item { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.news-item:first-of-type { padding-top: 0; }
+.news-item h3, .news-item h2 { margin: 0 0 .4rem; font-size: 1.1rem; border: 0; padding: 0; }
+.news-item h3 a, .news-item h2 a { color: var(--ink); text-decoration: none; }
+.news-item p { margin-bottom: .5rem; }
+.date { margin: 0; font: .8rem var(--sans); color: var(--muted); letter-spacing: .04em; }
+.more { font-family: var(--sans); font-size: .95rem; }
+.edition-list { list-style: none; padding: 0; }
+.edition-list li { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--rule); }
+
+/* People */
+.people { list-style: none; padding: 0; columns: 2; column-gap: 2rem; }
+.people li { break-inside: avoid; }
+.people .affiliation { font-style: italic; }
+.people .affiliation::before { content: ", "; font-style: normal; }
+
+/* Program */
+.program h2 { margin-top: 3rem; }
+.day { margin-top: 2.5rem; font-size: 1.25rem; color: var(--purple); }
+.session { display: grid; grid-template-columns: 7rem 1fr; column-gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+.session > * { grid-column: 2; }
+.session-head { display: contents; }
+.session-head .time { grid-column: 1; grid-row: 1 / span 3; margin: 0; font: .9rem/1.9 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.session-head h4 { font-size: 1.15rem; }
+.session-number { display: block; font: 600 .75rem/1.6 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.chair, .speaker { margin: .2rem 0 0; color: var(--muted); font-style: italic; }
+.session-description { margin-top: .5rem; color: var(--muted); }
+.note { margin-top: .75rem; font-size: .95rem; }
+.note p { margin: 0; }
+.slot { display: grid; grid-template-columns: 7rem 1fr; column-gap: 1.5rem; margin: 0; padding: .6rem 0; border-top: 1px solid var(--rule); color: var(--muted); font-style: italic; }
+.slot .time { font: normal .9rem/1.9 var(--sans); font-variant-numeric: tabular-nums; }
+.papers { list-style: none; padding: 0; margin: .75rem 0 0; }
+.paper { margin: 0 0 1rem; }
+.paper-title { margin: 0; font-weight: 700; }
+.paper-title a { color: var(--ink); text-decoration: none; }
+.paper-title a:hover { color: var(--purple); text-decoration: underline; }
+.authors { margin: .1rem 0 0; color: var(--muted); font-size: .97rem; }
+.authors em { font-style: normal; }
+.award { display: inline-block; margin: .25rem 0 0; font: 600 .75rem/1.6 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.links { display: flex; gap: 1rem; margin: .2rem 0 0; font: .85rem var(--sans); }
+.abstract { margin-top: .6rem; }
+.abstract summary { cursor: pointer; font: .85rem var(--sans); color: var(--purple); }
+.abstract p { font-size: .97rem; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--rule); padding: 1.5rem 0 3rem; font: .85rem/1.6 var(--sans); color: var(--muted); }
+.site-footer p { margin: 0 0 .3rem; }
+.site-footer a { color: inherit; }
+
+@media (max-width: 40rem) {
+  body { font-size: 1rem; }
+  .hero h1 { font-size: 2.3rem; }
+  .session, .slot { grid-template-columns: 1fr; }
+  .session > *, .session-head .time { grid-column: 1; grid-row: auto; }
+  .people { columns: 1; }
+}

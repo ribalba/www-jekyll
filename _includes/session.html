@@ -1,32 +1,53 @@
-
-{% assign session_papers = include.papers | where:"session",include.session %}
-{% assign session = include.session %}
-
-
-{%if session.show%}
-{%if session.id and session.id != 99%}
-### Session {{session.id}}: {{session.title}}
-{%else%}
-### {{session.title}}
-{%endif%}
-
-{%if session.chair%}
-**Time**&emsp; {{session.start}} -- {{session.stop}} ({{session.duration}})  
-**Chair**&emsp;{{session.chair}}
-{: .notice}
-{%else%}
-**Time**&emsp; {{session.start}} -- {{session.stop}} ({{session.duration}})
-{: .notice}
-{%endif%}
-
-
-{%if session.note%}
-{{session.note}}
-{: .notice--primary}
-{%endif%}
-
-{% for paper in session_papers %}
-{% include paper.html paper=paper %}
-{% endfor %}
-{%endif%}
-
+{%- comment -%}
+  One program slot: a paper session, a keynote, or a slot without papers
+  (opening, break, panel, posters). Called from program.html.
+{%- endcomment -%}
+{%- assign _ses = include.session -%}
+{%- if _ses.id == "keynote" -%}
+  {%- if _ses.day == 2 and include.prog.keynote2 -%}
+    {%- include keynote.html keynote=include.prog.keynote2 session=_ses -%}
+  {%- else -%}
+    {%- include keynote.html keynote=include.prog.keynote session=_ses -%}
+  {%- endif -%}
+{%- else -%}
+{%- assign _papers = "" | split: "" -%}
+{%- if _ses.id -%}{%- assign _papers = include.prog.papers | where: "session", _ses.id -%}{%- endif -%}
+{%- assign _rich = false -%}
+{%- if _papers.size > 0 -%}{%- assign _rich = true -%}{%- endif -%}
+{%- if _ses.description or _ses.chair or _ses.note or _ses.video -%}{%- assign _rich = true -%}{%- endif -%}
+{%- if _rich %}
+<section class="session"{% if _ses.id %} id="session-{{ _ses.id }}"{% endif %}>
+  <header class="session-head">
+    {%- if _ses.start %}
+    <p class="time">{{ _ses.start }}&ndash;{{ _ses.stop }}</p>
+    {%- endif %}
+    <h4>{% if _ses.id and _ses.id != 99 %}<span class="session-number">Session {{ _ses.id }}</span> {% endif %}{{ _ses.title | strip }}</h4>
+    {%- if _ses.chair %}
+    <p class="chair">Chair: {{ _ses.chair }}</p>
+    {%- endif %}
+  </header>
+  {%- if _ses.description %}
+  <p class="session-description">{{ _ses.description }}</p>
+  {%- endif %}
+  {%- if _ses.note %}
+  <div class="note">{{ _ses.note | markdownify }}</div>
+  {%- endif %}
+  {%- if _papers.size > 0 %}
+  <ol class="papers">
+    {%- for _paper in _papers -%}
+      {%- include paper.html paper=_paper -%}
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+  {%- if _ses.video or _ses.slides or _ses.qa_video %}
+  <p class="links">
+    {%- if _ses.slides %}<a href="{{ _ses.slides | relative_url }}">Slides</a>{% endif -%}
+    {%- if _ses.video %}<a href="{{ _ses.video }}">Video</a>{% endif -%}
+    {%- if _ses.qa_video %}<a href="{{ _ses.qa_video }}">Q&amp;A video</a>{% endif -%}
+  </p>
+  {%- endif %}
+</section>
+{%- else %}
+<p class="slot">{% if _ses.start %}<span class="time">{{ _ses.start }}&ndash;{{ _ses.stop }}</span> {% endif %}{{ _ses.title | strip }}</p>
+{%- endif -%}
+{%- endif -%}

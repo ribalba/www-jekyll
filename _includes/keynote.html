@@ -1,17 +1,27 @@
-<div>
-    {%if include.keynote.video%}
-    <div style="display: inline-block; width: 65%; vertical-align: top;">
-        <!-- {{ include.keynote.title }} -->
-        <!-- <br> -->
-        {{include.keynote.authors | markdownify }}
-    </div><div style="display: inline-block; width: 10%; vertical-align: top;">
-    </div><div style="display: inline-block; width: 25%; vertical-align: top;">
-    <a href="{{include.keynote.video}}">
-        <img src="/assets/images/-Video-red.svg"></a>
-    </div>
-    {%else%}
-        {{include.keynote.authors | markdownify }}
-    {%endif%}
-    <!-- Abstract -->
-    <blockquote style="margin-top: 0;">{{include.keynote.abstract | markdownify }}</blockquote>
-</div>
+{%- comment -%}
+  A keynote. Called from program.html and session.html.
+{%- endcomment -%}
+{%- assign _kn = include.keynote %}
+<section class="session keynote">
+  <header class="session-head">
+    {%- if include.session.start %}
+    <p class="time">{{ include.session.start }}&ndash;{{ include.session.stop }}</p>
+    {%- elsif _kn.start %}
+    <p class="time">{{ _kn.start }}&ndash;{{ _kn.stop }}</p>
+    {%- endif %}
+    <h4><span class="session-number">Keynote</span> {{ _kn.title }}</h4>
+    <p class="speaker">{{ _kn.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  </header>
+  {%- if _kn.abstract %}
+  <details class="abstract">
+    <summary>Abstract</summary>
+    {{ _kn.abstract | markdownify }}
+  </details>
+  {%- endif %}
+  {%- if _kn.slides or _kn.video %}
+  <p class="links">
+    {%- if _kn.slides %}<a href="{{ _kn.slides | relative_url }}">Slides</a>{% endif -%}
+    {%- if _kn.video %}<a href="{{ _kn.video }}">Video</a>{% endif -%}
+  </p>
+  {%- endif %}
+</section>

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{%- assign current = site.data.editions | where: "year", site.current_edition | first -%}
+{%- assign current_pages = site.pages | where: "edition", site.current_edition | sort: "nav_order" -%}
+{%- for _ed in site.data.editions -%}
+  {%- assign _key = "y" | append: _ed.year -%}
+  {%- if site.data.program[_key] -%}{%- assign latest_program = _ed -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+<section class="hero">
+  <p class="eyebrow">Workshop on Sustainable Computer Systems</p>
+  <h1>HotCarbon</h1>
+  <div class="lead">{{ content }}</div>
+</section>
+
+<section class="current" aria-labelledby="current-title">
+  <h2 id="current-title">HotCarbon {{ current.year }}</h2>
+  {%- if current.dates or current.location %}
+  {% include edition-facts.html year=current.year %}
+  {%- else %}
+  <p>Dates, location and the call for papers will be announced soon.</p>
+  {%- endif %}
+  {%- if current_pages.size > 1 %}
+  <p class="actions">
+    {%- for p in current_pages %}{% if p.section != "overview" %}
+    <a class="button" href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a>
+    {%- endif %}{% endfor %}
+  </p>
+  {%- endif %}
+  {%- if latest_program and latest_program.year != current.year %}
+  {%- assign _key = "y" | append: latest_program.year %}
+  <p class="more">The {{ site.data.program[_key].papers.size }} papers and talks of HotCarbon {{ latest_program.year }} are online. <a href="{{ '/' | append: latest_program.year | append: '/#program' | relative_url }}">Browse the {{ latest_program.year }} program</a></p>
+  {%- endif %}
+</section>
+
+<section class="news" aria-labelledby="news-title">
+  <h2 id="news-title">News</h2>
+  {%- for post in site.posts limit: 4 %}
+  <article class="news-item">
+    <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {{ post.content }}
+  </article>
+  {%- endfor %}
+  <p class="more"><a href="{{ '/news/' | relative_url }}">All news</a></p>
+</section>
+
+<section class="editions" aria-labelledby="editions-title">
+  <h2 id="editions-title">Past editions</h2>
+  <ul class="edition-list">
+    {%- for ed in site.data.editions %}
+    {%- assign _key = "y" | append: ed.year %}
+    {%- if site.data.program[_key] %}
+    <li>
+      <a href="{{ '/' | append: ed.year | append: '/' | relative_url }}">HotCarbon {{ ed.year }}</a>
+      <span class="muted">{% if ed.location %}{{ ed.location }} &middot; {% endif %}{{ site.data.program[_key].papers.size }} papers</span>
+    </li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+</section>

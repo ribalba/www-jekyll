@@ -1,3 +1,16 @@
+sessions:
+- id: 1
+  title: Hardware
+  show: True
+- id: 2
+  title: Networking
+  show: True
+- id: 3
+  title: Metrics
+  show: True
+- id: 4
+  title: Datacenters
+  show: True
 
 keynote:
   title: "Building low-carbon computer systems: when does carbon diverge from cost?"

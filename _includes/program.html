@@ -1,0 +1,43 @@
+{%- comment -%}
+  Full program of one edition, rendered from _data/program/yYYYY.yml.
+  Usage: {% include program.html year=2026 %}
+
+  - Sessions with `show: false` are skipped.
+  - Sessions with a `day` are grouped by day. The day headings come from
+    `days` in _data/editions.yml.
+  - A session with `id: keynote` shows `keynote` (day 1) or `keynote2` (day 2).
+{%- endcomment -%}
+{%- assign _key = "y" | append: include.year -%}
+{%- assign _prog = site.data.program[_key] -%}
+{%- assign _edition = site.data.editions | where: "year", include.year | first -%}
+{%- if _prog -%}
+<section class="program" id="program">
+<h2>Program</h2>
+{%- assign _sessions = _prog.sessions | where: "show", true -%}
+{%- assign _with_day = _sessions | where_exp: "s", "s.day" -%}
+{%- if _with_day.size > 0 -%}
+  {%- assign _days = _with_day | map: "day" | uniq -%}
+  {%- for _day in _days -%}
+    {%- assign _i = _day | minus: 1 -%}
+    {%- if _edition.days[_i] -%}
+      {%- assign _label = _edition.days[_i] -%}
+    {%- else -%}
+      {%- assign _label = "Day " | append: _day -%}
+    {%- endif %}
+<h3 class="day">{{ _label }}</h3>
+    {%- assign _day_sessions = _sessions | where: "day", _day -%}
+    {%- for _s in _day_sessions -%}
+      {%- include session.html session=_s prog=_prog -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign _has_keynote_slot = _sessions | where: "id", "keynote" -%}
+  {%- if _prog.keynote and _has_keynote_slot.size == 0 -%}
+    {%- include keynote.html keynote=_prog.keynote -%}
+  {%- endif -%}
+  {%- for _s in _sessions -%}
+    {%- include session.html session=_s prog=_prog -%}
+  {%- endfor -%}
+{%- endif %}
+</section>
+{%- endif -%}

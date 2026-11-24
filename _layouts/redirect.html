@@ -1,0 +1,30 @@
+{%- comment -%}
+  Keeps old URLs (/cfp, /program, /register, /orga) working.
+  Set `redirect_section` to send visitors to the newest page with that section,
+  or `redirect_to` for a fixed target.
+{%- endcomment -%}
+{%- if page.redirect_section == "program" -%}
+  {%- for _ed in site.data.editions -%}
+    {%- assign _key = "y" | append: _ed.year -%}
+    {%- if site.data.program[_key] -%}{%- assign _target = "/" | append: _ed.year | append: "/#program" -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- elsif page.redirect_section -%}
+  {%- assign _target_page = site.pages | where: "section", page.redirect_section | sort: "edition" | last -%}
+  {%- assign _target = _target_page.url -%}
+{%- else -%}
+  {%- assign _target = page.redirect_to -%}
+{%- endif -%}
+{%- assign _target = _target | relative_url -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting | {{ site.title }}</title>
+<link rel="canonical" href="{{ _target }}">
+<meta http-equiv="refresh" content="0; url={{ _target }}">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<p>This page has moved to <a href="{{ _target }}">{{ _target }}</a>.</p>
+</body>
+</html>

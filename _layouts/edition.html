@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{%- comment -%}
+  Layout for every page of one edition (/YYYY/, /YYYY/cfp/, ...).
+  Front matter: edition (the year), section, title, nav_title, nav_order.
+  The sub navigation lists all pages with the same `edition`.
+{%- endcomment -%}
+{%- assign edition = site.data.editions | where: "year", page.edition | first -%}
+{%- assign edition_pages = site.pages | where: "edition", page.edition | sort: "nav_order" -%}
+<article class="page edition">
+  <header class="page-head">
+    {%- if page.section != "overview" %}
+    <p class="eyebrow"><a href="{{ '/' | append: page.edition | append: '/' | relative_url }}">HotCarbon {{ page.edition }}</a></p>
+    {%- endif %}
+    <h1>{{ page.title }}</h1>
+    {%- if page.section == "overview" and edition.dates %}
+    <p class="subtitle">{{ edition.dates }}{% if edition.location %} &middot; {{ edition.location }}{% endif %}</p>
+    {%- endif %}
+    {%- if edition_pages.size > 1 %}
+    <nav class="subnav" aria-label="HotCarbon {{ page.edition }}">
+      {%- for p in edition_pages %}
+      <a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
+      {%- endfor %}
+    </nav>
+    {%- endif %}
+  </header>
+  {%- if page.edition < site.current_edition and page.section != "overview" %}
+  <p class="notice">This page belongs to HotCarbon {{ page.edition }} and is kept for reference. HotCarbon {{ site.current_edition }} is coming, see the <a href="{{ '/' | relative_url }}">home page</a> for news.</p>
+  {%- endif %}
+  {{ content }}
+</article>

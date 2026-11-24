@@ -1,3 +1,30 @@
+sessions:
+- id: 1
+  title: Systems
+  show: True
+  description: "This session focuses on systems energy and carbon quantification and optimization, including CPU, GPU, DRAMs, their configuration, tools, and accuracy evaluation."
+  qa_video: "https://mediaspace.ucsd.edu/media/HotCarbon%E2%80%9923%3A%20Q%26A%20for%20track%201/1_68ml5055/307441832"
+- id: 2
+  title: "Multi Clouds: Unique challenges and opportunities"
+  show: True
+  description: "This session focuses on the unique challenges and potential research opportunities related to cloud environments."
+  qa_video: "https://mediaspace.ucsd.edu/media/HotCarbon%E2%80%9923%3A%20Q%26A%20for%20track%202/1_7dpx0gs2/307441832"
+- id: 3
+  title: Data and AI
+  show: True
+  description: "This session focuses on the unique challenges and opportunities in addressing the rising energy and carbon cost of Data and AI."
+  qa_video: "https://mediaspace.ucsd.edu/media/HotCarbon%E2%80%9923%3A%20Q%26A%20for%20track%203/1_gme84nvn/307441832"
+- id: 4
+  title: The Life Cycle of Applications
+  show: True
+  description: "This session focuses on tradeoffs across the life cycle such as embodied carbon calculation, tradeoffs between energy and carbon, and also, global policy issues."
+  qa_video: "https://mediaspace.ucsd.edu/media/HotCarbon%E2%80%9923%3A%20Q%26A%20for%20track%204/1_ekfjz5ep/307441832"
+- id:
+  title: "Panel: Can AI be sustainable?"
+  show: True
+  note: "Panelists: Martha Kim (Columbia Univ.), Ramya Raghavendra (Meta), Huamin Chen (RedHat), Andrew Chien (Univ. of Chicago), Sanjay Krishnan (Univ. of Chicago)"
+  slides: "/assets/2023/pdf/panel.pdf"
+  video: "https://mediaspace.ucsd.edu/media/HotCarbon%E2%80%9923%3A%20Panel%3A%20%E2%80%9CCan%20AI%20be%20sustainable%E2%80%9D/1_ypi4hsme"
 
 papers:
 - title : "The Case of Unsustainable CPU Affinity "

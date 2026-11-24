@@ -1,0 +1,127 @@
+# One entry per edition, newest first.
+#
+# The home page, the edition pages (/YYYY/...) and the organizer page are
+# rendered from this file. To start a new edition, copy the latest entry,
+# change the values and set `current_edition` in _config.yml.
+#
+# Leave a field empty when it is not known yet. Empty fields are not shown.
+
+- year: 2027
+  status: upcoming          # upcoming | open | past
+  dates:                    # e.g. "Thu-Fri, July 15-16, 2027"
+  days: []                  # one heading per program day, e.g. "Thursday, July 15"
+  location:
+  venue:
+  colocated:
+  chairs: []
+  deadlines: []
+  links: {}
+
+- year: 2026
+  status: past
+  dates: "Thu-Fri, July 16-17, 2026"
+  days: ["Thursday, July 16", "Friday, July 17"]
+  location: "Seattle, WA, USA"
+  venue: "Bill and Melinda Gates Center for CSE, University of Washington"
+  colocated: "Immediately after OSDI 2026"
+  chairs:
+    - name: Yi Ding
+      affiliation: Purdue
+    - name: Rodrigo Fonseca
+      affiliation: Microsoft Azure
+  deadlines:
+    - label: Paper registration
+      date: "May 11, 2026 (AoE)"
+    - label: Submission
+      date: "May 18, 2026 (AoE)"
+    - label: Notification
+      date: "June 19, 2026 (AoE)"
+  links:
+    submission: https://hotcarbon26.hotcrp.com/
+    registration: https://cvent.me/1XN4Kq
+    proceedings:
+  proceedings_note: "Papers will be published in the ACM Digital Library as a special issue of the SIGEnergy Energy Informatics Review."
+  committee:
+    - { name: Abel Souza, affiliation: UCSC }
+    - { name: Ana Radovanovic, affiliation: Google }
+    - { name: Arthi Padmanabhan, affiliation: Harvey Mudd College }
+    - { name: August Ning, affiliation: EPFL }
+    - { name: Dan Wang, affiliation: HKUST }
+    - { name: Dilma da Silva, affiliation: Texas A&M }
+    - { name: Fiodar Kazhamiaka, affiliation: Azure Research }
+    - { name: George Porter, affiliation: Amazon }
+    - { name: Jennifer Switzer, affiliation: Google }
+    - { name: Karin Strauss, affiliation: Microsoft Research }
+    - { name: Li Wu, affiliation: UMass }
+    - { name: Mohammad Shahrad, affiliation: University of British Columbia }
+    - { name: Neeraja J. Yadwadkar, affiliation: UT Austin }
+    - { name: Niki Manoledaki, affiliation: Grafana Labs }
+    - { name: Noman Bashir, affiliation: Amazon }
+    - { name: Prateek Sharma, affiliation: IU }
+    - { name: Raja Sambasivan, affiliation: Tufts }
+    - { name: Shaolei Ren, affiliation: UCR }
+    - { name: Sihang Liu, affiliation: University of Waterloo }
+    - { name: Timo Hoenig, affiliation: Ruhr University Bochum }
+    - { name: Walid Hanafy, affiliation: UMass }
+
+- year: 2025
+  status: past
+  dates: "Thu-Fri, July 10-11, 2025"
+  days: ["Thursday, July 10", "Friday, July 11"]
+  location: "Cambridge, MA, USA"
+  venue: "Microsoft NERD Center"
+  colocated: "Co-located with OSDI 2025"
+  chairs:
+    - name: Timo Hoenig
+      affiliation: RUB
+    - name: Abel Souza
+      affiliation: UCSC
+  deadlines:
+    - label: Paper registration
+      date: "May 5, 2025 (AoE)"
+    - label: Submission
+      date: "May 19, 2025 (AoE)"
+    - label: Notification
+      date: "June 16, 2025"
+  links:
+    submission: https://hotcarbon25.hotcrp.com/
+    proceedings: https://dl.acm.org/toc/sigenergy-eir/2025/5/2
+  proceedings_note: "Papers are published in the ACM Digital Library as a special issue of the SIGEnergy Energy Informatics Review."
+
+- year: 2024
+  status: past
+  dates: "Tue, July 9, 2024"
+  location: "Santa Cruz, CA, USA"
+  venue: "UCSC Hay Barn"
+  colocated: "Immediately before OSDI 2024"
+  chairs:
+    - name: Simon Peter
+      affiliation: University of Washington
+    - name: Esha Choukse
+      affiliation: Microsoft
+  deadlines:
+    - label: Paper registration
+      date: "May 5, 2024 (AoE)"
+    - label: Submission
+      date: "May 8, 2024 (AoE)"
+    - label: Notification
+      date: "June 12, 2024"
+  links: {}
+
+- year: 2023
+  status: past
+  chairs:
+    - name: Tamar Eilam
+      affiliation: IBM Research, New York
+    - name: Andrew A. Chien
+      affiliation: University of Chicago and Argonne
+  links: {}
+
+- year: 2022
+  status: past
+  chairs:
+    - name: Tom Anderson
+      affiliation: University of Washington
+    - name: George Porter
+      affiliation: UCSD
+  links: {}

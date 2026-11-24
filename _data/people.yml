@@ -1,0 +1,13 @@
+# People who are not tied to a single edition.
+# Program chairs and committees are listed per year in _data/editions.yml.
+
+steering:
+  - { name: George Porter, affiliation: UC San Diego }
+  - { name: Tom Anderson, affiliation: University of Washington }
+  - { name: Colleen Josephson, affiliation: UC Santa Cruz }
+  - { name: Carole-Jean Wu, affiliation: Meta AI }
+  - { name: Romain Jacob, affiliation: ETH Zürich }
+  - { name: Udit Gupta, affiliation: Cornell }
+
+publicity:
+  - { name: Romain Jacob, affiliation: ETH Zürich }

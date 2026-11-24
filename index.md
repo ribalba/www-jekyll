@@ -1,12 +1,6 @@
 ---
-toc: false
-classes: wide
+layout: home
+title: Home
 ---
 
-# HotCarbon Workshop on <br>Sustainable Computer Systems
-
-HotCarbon aims to bring together researchers and practitioners in computer and networked systems to engage in a lively discussion around sustainability throughout the entire computing lifecycle, focusing on both the operational and embodied impact of computer systems.
-
-## News
-
-{% include news_list.html n-item=5 %}
+HotCarbon brings together researchers and practitioners in computer and networked systems for a lively discussion about sustainability throughout the entire computing lifecycle. We focus on both the operational and the embodied impact of computer systems.

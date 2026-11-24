@@ -1,0 +1,9 @@
+{%- comment -%}
+  A list of people with affiliations.
+  Usage: {% include people.html people=site.data.people.steering %}
+{%- endcomment -%}
+<ul class="people">
+  {%- for _person in include.people %}
+  <li>{{ _person.name }}{% if _person.affiliation %} <span class="affiliation">{{ _person.affiliation }}</span>{% endif %}</li>
+  {%- endfor %}
+</ul>

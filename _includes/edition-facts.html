@@ -1,0 +1,37 @@
+{%- comment -%}
+  Key facts of one edition, rendered from _data/editions.yml.
+  Usage: {% include edition-facts.html year=2026 %}
+{%- endcomment -%}
+{%- assign _ed = site.data.editions | where: "year", include.year | first -%}
+{%- if _ed.dates or _ed.location or _ed.deadlines.size > 0 -%}
+<dl class="facts">
+  {%- if _ed.dates %}
+  <div><dt>Dates</dt><dd>{{ _ed.dates }}</dd></div>
+  {%- endif %}
+  {%- if _ed.location %}
+  <div><dt>Location</dt><dd>{{ _ed.location }}{% if _ed.venue %}<br><span class="muted">{{ _ed.venue }}</span>{% endif %}</dd></div>
+  {%- endif %}
+  {%- if _ed.colocated %}
+  <div><dt>Co-location</dt><dd>{{ _ed.colocated }}</dd></div>
+  {%- endif %}
+  {%- for _d in _ed.deadlines %}
+  <div><dt>{{ _d.label }}</dt><dd>{{ _d.date }}</dd></div>
+  {%- endfor %}
+</dl>
+{%- endif -%}
+{%- if _ed.proceedings_note %}
+<p class="proceedings">{{ _ed.proceedings_note }}</p>
+{%- endif -%}
+{%- if _ed.links.submission or _ed.links.registration or _ed.links.proceedings %}
+<p class="actions">
+  {%- if _ed.links.submission and _ed.status != "past" %}
+  <a class="button" href="{{ _ed.links.submission }}">Submit a paper</a>
+  {%- endif %}
+  {%- if _ed.links.registration and _ed.status != "past" %}
+  <a class="button" href="{{ _ed.links.registration }}">Register</a>
+  {%- endif %}
+  {%- if _ed.links.proceedings %}
+  <a class="button" href="{{ _ed.links.proceedings }}">Proceedings in the ACM DL</a>
+  {%- endif %}
+</p>
+{%- endif -%}
