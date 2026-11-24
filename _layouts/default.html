@@ -5,24 +5,38 @@
 </head>
 <body class="layout-{{ page.layout }}">
 <a class="skip" href="#content">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
+{%- assign _current = site.data.editions | where: "year", site.current_edition | first %}
+<div class="shell">
+  <aside class="sidebar">
     <a class="brand" href="{{ '/' | relative_url }}">
       {% include logo.svg %}
-      <span class="brand-text"><span class="brand-name">HotCarbon</span><span class="brand-sub">{{ site.subtitle }}</span></span>
+      <span class="brand-name">HotCarbon</span>
+      <span class="brand-sub">{{ site.subtitle }}</span>
     </a>
     <nav class="site-nav" aria-label="Main">
       {% include nav.html %}
     </nav>
-  </div>
-</header>
-<main id="content" class="wrap">
+    <div class="side-edition">
+      <p class="side-label">Next edition</p>
+      <p class="side-year">HotCarbon {{ _current.year }}</p>
+      {%- if _current.dates %}
+      <p>{{ _current.dates }}<br>{{ _current.location }}</p>
+      {%- for _d in _current.deadlines %}
+      <p class="side-deadline"><span>{{ _d.label }}</span> {{ _d.date }}</p>
+      {%- endfor %}
+      {%- else %}
+      <p>Dates and location to be announced.</p>
+      {%- endif %}
+    </div>
+  </aside>
+  <div class="main-col">
+    <main id="content">
 {{ content }}
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    {% include footer.html %}
+    </main>
+    <footer class="site-footer">
+      {% include footer.html %}
+    </footer>
   </div>
-</footer>
+</div>
 </body>
 </html>
