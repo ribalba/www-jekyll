@@ -14,6 +14,7 @@
   venue:
   colocated:
   chairs: []
+  contact:                  # e-mail of the program chairs, e.g. "hotcarbon27chairs@example.org"
   deadlines: []
   links: {}
 
@@ -29,6 +30,7 @@
       affiliation: Purdue
     - name: Rodrigo Fonseca
       affiliation: Microsoft Azure
+  contact: "yiding@purdue.edu,Fonseca.Rodrigo@microsoft.com"
   deadlines:
     - label: Paper registration
       date: "May 11, 2026 (AoE)"
@@ -76,6 +78,7 @@
       affiliation: RUB
     - name: Abel Souza
       affiliation: UCSC
+  contact: "hotcarbon25chairs@lists.rub.de"
   deadlines:
     - label: Paper registration
       date: "May 5, 2025 (AoE)"
@@ -99,6 +102,7 @@
       affiliation: University of Washington
     - name: Esha Choukse
       affiliation: Microsoft
+  contact: "hotcarbon24chairs@googlegroups.com"
   deadlines:
     - label: Paper registration
       date: "May 5, 2024 (AoE)"

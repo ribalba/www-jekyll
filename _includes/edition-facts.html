@@ -14,6 +14,12 @@
   {%- if _ed.colocated %}
   <div><dt>Co-location</dt><dd>{{ _ed.colocated }}</dd></div>
   {%- endif %}
+  {%- if _ed.chairs.size > 0 %}
+  <div><dt>Program chairs</dt><dd>
+    {%- for _c in _ed.chairs %}{{ _c.name }}{% if _c.affiliation %} <span class="muted">({{ _c.affiliation }})</span>{% endif %}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
+    {%- if _ed.contact %}<br><a class="contact" href="mailto:{{ _ed.contact }}">Email the chairs</a>{% endif -%}
+  </dd></div>
+  {%- endif %}
   {%- for _d in _ed.deadlines %}
   <div><dt>{{ _d.label }}</dt><dd>{{ _d.date }}</dd></div>
   {%- endfor %}

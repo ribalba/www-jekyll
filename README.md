@@ -7,7 +7,7 @@ It uses its own small layouts and one plain CSS file. There is no theme, no Java
 
 ```
 _config.yml              current_edition: the year shown on the home page
-_data/editions.yml       one entry per year: dates, location, deadlines, chairs, committee, links
+_data/editions.yml       one entry per year: dates, location, deadlines, chairs, contact, committee, links
 _data/program/yYYYY.yml  sessions, keynotes and papers of one year
 _data/people.yml         steering committee and publicity chair
 _posts/                  news items, shown on the home page and on /news/

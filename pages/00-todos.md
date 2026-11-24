@@ -15,6 +15,6 @@ toc: false
 - [ ] Create Zenodo community and upload PDFs there? 
     That would give us proper arxiving
 - [ ] All videos on YouTube
-- [ ] Polish the paper listing layout
-- [ ] Unify the keynote vs paper displays
-- [ ] Add contact info from the chairs
+- [x] Polish the paper listing layout
+- [x] Unify the keynote vs paper displays
+- [x] Add contact info from the chairs
