@@ -58,8 +58,6 @@ a:hover { color: #8a2a9c; }
 
 .main-col { min-width: 0; display: flex; flex-direction: column; }
 main { flex: 1; width: 100%; max-width: 76rem; margin: 0 auto; padding: 3rem 3.5rem 4rem; }
-/* Running text keeps a readable line length, the program and the cards use the full width */
-.page > p, .page > ul, .page > ol, .page > blockquote, .page > h2, .page > h3, .news-item p, .notice, .proceedings { max-width: 46rem; }
 
 /* Type */
 h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -.01em; }
@@ -103,7 +101,7 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .hero { padding-bottom: 1rem; }
 .hero .eyebrow { display: none; }
 .hero h1 { font-size: 2.8rem; margin-bottom: .75rem; }
-.hero .lead p { font-size: 1.2rem; color: #3a3242; max-width: 40rem; }
+.hero .lead p { font-size: 1.2rem; color: #3a3242; }
 .current { padding: 1.5rem 1.75rem; background: var(--purple-soft); border-radius: 10px; margin-top: 1.5rem; }
 .current h2 { margin-top: 0; }
 .current .more { margin: 0; }
