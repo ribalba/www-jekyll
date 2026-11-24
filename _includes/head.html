@@ -7,6 +7,21 @@
 {%- endif %}
 <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- comment -%}
+  Link previews in Signal, Slack, Mastodon etc. read these tags.
+  og:image must be an absolute URL, so `url` in _config.yml has to match the host.
+{%- endcomment -%}
+{%- if page.url == "/" %}{% assign _og_title = site.title | append: ": " | append: site.subtitle %}{% else %}{% assign _og_title = page.title | append: " | " | append: site.title %}{% endif %}
+<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ _og_title | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HotCarbon, Workshop on Sustainable Computer Systems">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{{ '/assets/css/hotcarbon.css' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
