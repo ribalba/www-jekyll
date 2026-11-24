@@ -87,11 +87,11 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .button { display: inline-block; padding: .5rem 1.05rem; border-radius: 6px; background: var(--purple); color: #fff; text-decoration: none; font-weight: 600; font-size: .9rem; }
 .button:hover { background: var(--purple-dark); color: var(--yellow); }
 
-/* Facts as small cards */
-.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .75rem; margin: 0 0 1rem; }
-.facts > div { padding: .8rem 1rem; border: 1px solid var(--rule); border-radius: 8px; }
+/* Facts as a list, one row per fact: label on the left, value on the right */
+.facts { margin: 0 0 1rem; border-top: 1px solid var(--rule); }
+.facts > div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); column-gap: 1.5rem; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--rule); }
 .facts dt { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.facts dd { margin: .15rem 0 0; font-weight: 600; }
+.facts dd { margin: 0; font-weight: 600; }
 .facts dd .muted { font-weight: 400; font-size: .9rem; }
 .proceedings { color: var(--muted); font-size: .95rem; }
 .facts .contact { display: inline-block; margin-top: .3rem; font-size: .9rem; }
@@ -176,6 +176,7 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
   main { padding: 2rem 1.25rem 3rem; }
   .paper { display: block; }
   .edition-list li { grid-template-columns: 1fr; row-gap: .15rem; }
+  .facts > div { grid-template-columns: 1fr; row-gap: .1rem; }
   .paper > .links { margin: .45rem 0 0; }
   .site-footer { padding: 1.5rem 1.25rem 2rem; }
   .hero h1 { font-size: 2.2rem; }
