@@ -41,9 +41,9 @@
   {%- endif %}
   {%- if _ses.video or _ses.slides or _ses.qa_video %}
   <p class="links">
-    {%- if _ses.slides %}<a href="{{ _ses.slides | relative_url }}">Slides</a>{% endif -%}
-    {%- if _ses.video %}<a href="{{ _ses.video }}">Video</a>{% endif -%}
-    {%- if _ses.qa_video %}<a href="{{ _ses.qa_video }}">Q&amp;A video</a>{% endif -%}
+    {%- if _ses.slides %}<a href="{{ _ses.slides | relative_url }}" target="_blank" rel="noopener">Slides</a>{% endif -%}
+    {%- if _ses.video %}<a href="{{ _ses.video }}" target="_blank" rel="noopener">Video</a>{% endif -%}
+    {%- if _ses.qa_video %}<a href="{{ _ses.qa_video }}" target="_blank" rel="noopener">Q&amp;A video</a>{% endif -%}
   </p>
   {%- endif %}
 </section>
