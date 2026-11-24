@@ -1,0 +1,31 @@
+{%- comment -%}
+  The people of one paper or talk, with each affiliation set apart from
+  the name. Accepts `list` (entries like "Name (Affiliation)") or `text`
+  (a string).
+  - A string with markdown, as used in 2022, is rendered as markdown.
+  - A plain string is split at "; " into groups like
+    "Name, Name (Affiliation)", as used in 2023 and for keynotes.
+  Usage: {% include authors.html list=_alist text=paper.authors %}
+  (assign paper['author-list'] to a variable first, include cannot take [])
+{%- endcomment -%}
+{%- assign _entries = include.list -%}
+{%- assign _markdown = false -%}
+{%- assign _sep = ", " -%}
+{%- if _entries == nil and include.text -%}
+  {%- if include.text contains "_" or include.text contains "*" -%}
+    {%- assign _markdown = true -%}
+  {%- else -%}
+    {%- assign _entries = include.text | split: "; " -%}
+    {%- assign _sep = "; " -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if _entries -%}
+  {%- for _e in _entries -%}
+    {%- assign _entry = _e | strip | replace: "( ", "(" | replace: " )", ")" -%}
+    {%- assign _name = _entry | split: " (" | first -%}
+    {%- assign _aff = _entry | remove_first: _name | strip -%}
+    <span class="author">{{ _name }}{% if _aff != "" %} <span class="affiliation">{{ _aff }}</span>{% endif %}</span>{% unless forloop.last %}{{ _sep }}{% endunless %}
+  {%- endfor -%}
+{%- elsif _markdown -%}
+  {{ include.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+{%- endif -%}

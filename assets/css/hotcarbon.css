@@ -94,6 +94,8 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .facts dd { margin: .15rem 0 0; font-weight: 600; }
 .facts dd .muted { font-weight: 400; font-size: .9rem; }
 .proceedings { color: var(--muted); font-size: .95rem; }
+.facts .contact { display: inline-block; margin-top: .3rem; font-size: .9rem; }
+.contact-line { margin: -.2rem 0 1rem; font-size: .92rem; }
 
 /* Home */
 .hero { padding-bottom: 1rem; }
@@ -134,10 +136,10 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .paper-title { margin: 0; font-weight: 600; }
 .paper-title a { color: var(--ink); text-decoration: none; }
 .paper-title a:hover { color: var(--purple); text-decoration: underline; }
-.authors { margin: .15rem 0 0; color: var(--muted); font-size: .9rem; }
-.authors em { font-style: normal; }
-.award { display: inline-block; margin: .3rem 0 0; padding: .05rem .5rem; border-radius: 4px; background: var(--yellow); color: #5a4800; font-size: .75rem; font-weight: 700; }
-.links { display: flex; gap: .4rem; margin: .4rem 0 0; }
+.authors { margin: .2rem 0 0; color: var(--ink); font-size: .9rem; line-height: 1.5; }
+.authors .affiliation, .authors em { color: var(--muted); font-style: normal; }
+.award { display: inline-block; margin: 0 0 0 .4rem; padding: .05rem .5rem; border-radius: 4px; background: var(--yellow); color: #5a4800; font-size: .75rem; font-weight: 700; vertical-align: .1em; white-space: nowrap; }
+.links { display: flex; flex-wrap: wrap; gap: .4rem; margin: .45rem 0 0; }
 .links a { font-size: .78rem; font-weight: 600; padding: .1rem .55rem; border: 1px solid var(--rule); border-radius: 4px; text-decoration: none; }
 .links a:hover { border-color: var(--purple); }
 .abstract { margin-top: .6rem; }

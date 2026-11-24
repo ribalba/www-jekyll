@@ -1,25 +1,25 @@
 {%- comment -%}
-  One paper. Accepts either `authors` (a markdown string) or
-  `author-list` (one "Name (Affiliation)" entry per author).
+  One paper or talk. Papers and keynotes use the same markup, so they look
+  the same in the program. Accepts either `authors` (a string) or
+  `author-list` (one "Name (Affiliation)" entry per author). `abstract`,
+  `award`, `pdf`, `slides` and `video` are optional.
 {%- endcomment -%}
-{%- assign _pp = include.paper %}
+{%- assign _pp = include.paper -%}
+{%- assign _alist = _pp['author-list'] %}
 <li class="paper">
-  <p class="paper-title">{% if _pp.pdf %}<a href="{{ _pp.pdf | relative_url }}">{{ _pp.title | strip }}</a>{% else %}{{ _pp.title | strip }}{% endif %}</p>
-  {%- if _pp.award %}
-  <p class="award">{{ _pp.award }}</p>
-  {%- endif %}
-  <p class="authors">
-    {%- if _pp.authors -%}
-      {{ _pp.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}
-    {%- elsif _pp['author-list'] -%}
-      {{ _pp['author-list'] | join: ", " | replace: "( ", "(" | replace: " )", ")" }}
-    {%- endif -%}
-  </p>
+  <p class="paper-title">{% if _pp.pdf %}<a href="{{ _pp.pdf | relative_url }}">{{ _pp.title | strip }}</a>{% else %}{{ _pp.title | strip }}{% endif %}{% if _pp.award %} <span class="award">{{ _pp.award }}</span>{% endif %}</p>
+  <p class="authors">{% include authors.html list=_alist text=_pp.authors %}</p>
   {%- if _pp.pdf or _pp.slides or _pp.video %}
   <p class="links">
     {%- if _pp.pdf %}<a href="{{ _pp.pdf | relative_url }}">PDF</a>{% endif -%}
     {%- if _pp.slides %}<a href="{{ _pp.slides | relative_url }}">Slides</a>{% endif -%}
     {%- if _pp.video %}<a href="{{ _pp.video }}">Video</a>{% endif -%}
   </p>
+  {%- endif %}
+  {%- if _pp.abstract %}
+  <details class="abstract">
+    <summary>Abstract</summary>
+    {{ _pp.abstract | markdownify }}
+  </details>
   {%- endif %}
 </li>

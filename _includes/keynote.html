@@ -1,5 +1,7 @@
 {%- comment -%}
-  A keynote. Called from program.html and session.html.
+  A keynote. It is shown like a paper session with one talk, so title,
+  speaker, abstract and links look the same as for papers.
+  Called from program.html and session.html.
 {%- endcomment -%}
 {%- assign _kn = include.keynote %}
 <section class="session keynote">
@@ -9,19 +11,12 @@
     {%- elsif _kn.start %}
     <p class="time">{{ _kn.start }}&ndash;{{ _kn.stop }}</p>
     {%- endif %}
-    <h4><span class="session-number">Keynote</span> {{ _kn.title }}</h4>
-    <p class="speaker">{{ _kn.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    <h4><span class="session-number">Keynote</span></h4>
+    {%- if include.session.chair %}
+    <p class="chair">Chair: {{ include.session.chair }}</p>
+    {%- endif %}
   </header>
-  {%- if _kn.abstract %}
-  <details class="abstract">
-    <summary>Abstract</summary>
-    {{ _kn.abstract | markdownify }}
-  </details>
-  {%- endif %}
-  {%- if _kn.slides or _kn.video %}
-  <p class="links">
-    {%- if _kn.slides %}<a href="{{ _kn.slides | relative_url }}">Slides</a>{% endif -%}
-    {%- if _kn.video %}<a href="{{ _kn.video }}">Video</a>{% endif -%}
-  </p>
-  {%- endif %}
+  <ol class="papers">
+    {%- include paper.html paper=_kn %}
+  </ol>
 </section>
