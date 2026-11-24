@@ -16,16 +16,6 @@
     <nav class="site-nav" aria-label="Main">
       {% include nav.html %}
     </nav>
-    {%- comment -%}
-      On phones the navigation above is hidden and this menu takes its
-      place. It is a plain <details> element, so it opens without JavaScript.
-    {%- endcomment %}
-    <details class="menu">
-      <summary><span class="menu-label-open">Menu</span><span class="menu-label-close">Close</span></summary>
-      <nav class="menu-panel" aria-label="Main">
-        {% include nav.html %}
-      </nav>
-    </details>
     <div class="side-edition">
       <p class="side-label">Next edition</p>
       <p class="side-year">HotCarbon {{ _current.year }}</p>
