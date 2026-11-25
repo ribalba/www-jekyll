@@ -17,7 +17,7 @@ _Immediately after OSDI 2025_
 - Submission Deadline: May 19, ~~May 12~~ 2025 (AoE)
 - Notifications: June 13, 2025
 
-One-page [CfP as PDF (0.2MB)]({{ '/assets/2025/HotCarbon25_CfP.pdf' | relative_url }})
+{% assign _cfp = '/assets/2025/HotCarbon25_CfP.pdf' %}One-page [CfP as PDF ({{ _cfp | file_size }})]({{ _cfp | relative_url }})
 {: .notice--primary}
 
 ## Overview

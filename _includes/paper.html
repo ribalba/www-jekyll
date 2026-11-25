@@ -2,7 +2,8 @@
   One paper or talk. Papers and keynotes use the same markup, so they look
   the same in the program. Accepts either `authors` (a string) or
   `author-list` (one "Name (Affiliation)" entry per author). `abstract`,
-  `award`, `pdf`, `slides` and `video` are optional.
+  `award`, `pdf`, `slides` and `video` are optional. Local PDF and slide
+  links show their file size (see _plugins/file_size.rb).
 {%- endcomment -%}
 {%- assign _pp = include.paper -%}
 {%- assign _alist = _pp['author-list'] %}
@@ -11,8 +12,8 @@
   <p class="authors">{% include authors.html list=_alist text=_pp.authors %}</p>
   {%- if _pp.pdf or _pp.slides or _pp.video %}
   <p class="links">
-    {%- if _pp.pdf %}<a href="{{ _pp.pdf | relative_url }}" target="_blank" rel="noopener">PDF</a>{% endif -%}
-    {%- if _pp.slides %}<a href="{{ _pp.slides | relative_url }}" target="_blank" rel="noopener">Slides</a>{% endif -%}
+    {%- if _pp.pdf %}{% assign _size = _pp.pdf | file_size %}<a href="{{ _pp.pdf | relative_url }}" target="_blank" rel="noopener">PDF{% if _size != "" %} <span class="size">{{ _size }}</span>{% endif %}</a>{% endif -%}
+    {%- if _pp.slides %}{% assign _size = _pp.slides | file_size %}<a href="{{ _pp.slides | relative_url }}" target="_blank" rel="noopener">Slides{% if _size != "" %} <span class="size">{{ _size }}</span>{% endif %}</a>{% endif -%}
     {%- if _pp.video %}<a href="{{ _pp.video }}" target="_blank" rel="noopener">Video</a>{% endif -%}
   </p>
   {%- endif %}

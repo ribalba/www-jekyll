@@ -41,7 +41,7 @@
   {%- endif %}
   {%- if _ses.video or _ses.slides or _ses.qa_video %}
   <p class="links">
-    {%- if _ses.slides %}<a href="{{ _ses.slides | relative_url }}" target="_blank" rel="noopener">Slides</a>{% endif -%}
+    {%- if _ses.slides %}{% assign _size = _ses.slides | file_size %}<a href="{{ _ses.slides | relative_url }}" target="_blank" rel="noopener">Slides{% if _size != "" %} <span class="size">{{ _size }}</span>{% endif %}</a>{% endif -%}
     {%- if _ses.video %}<a href="{{ _ses.video }}" target="_blank" rel="noopener">Video</a>{% endif -%}
     {%- if _ses.qa_video %}<a href="{{ _ses.qa_video }}" target="_blank" rel="noopener">Q&amp;A video</a>{% endif -%}
   </p>
