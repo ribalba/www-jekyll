@@ -1,0 +1,16 @@
+# Measured footprint of the home page, shown in the footer.
+# Measured with the Green Metrics Tool website tester (webNRG):
+#   https://website-tester.green-coding.io/
+# To update, run the tester for the site and copy the values from its
+# details page. `render_energy_mwh` is the CPU energy of the phase
+# "Visit page and idle for 5 s" and `transfer_kb` the data it transferred.
+# `scroll_energy_mwh` and `scroll_seconds` are the CPU energy and length of
+# the phase "Scroll down and wait for 5 s". The details page shows the power
+# and duration of that phase, and energy = power x duration.
+page: "https://ribalba.github.io/www-jekyll"
+measured: 2026-11-24
+render_energy_mwh: 4.46
+transfer_kb: 36.4
+scroll_energy_mwh: 33.2
+scroll_seconds: 46
+details: "https://website-tester.green-coding.io/details.html?page=https://ribalba.github.io/www-jekyll"

@@ -1,2 +1,6 @@
 <p>&copy; {{ site.time | date: '%Y' }} HotCarbon, the Workshop on Sustainable Computer Systems.</p>
 <p>This site is static: no JavaScript, no web fonts, no trackers. <a href="{{ site.repository }}">Source on GitHub</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+{%- assign _fp = site.data.footprint %}
+{%- if _fp %}
+<p class="footprint">The home page takes {{ _fp.render_energy_mwh }} mWh to load{% if _fp.scroll_energy_mwh %}, {{ _fp.scroll_energy_mwh }} mWh to scroll{% endif %} and {{ _fp.transfer_kb }} kB of data. <a href="{{ _fp.details }}" title="Measured on {{ _fp.measured | date: '%-d %B %Y' }}">Measurement details</a></p>
+{%- endif %}
