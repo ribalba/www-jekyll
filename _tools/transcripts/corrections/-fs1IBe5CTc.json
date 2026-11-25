@@ -1,0 +1,30 @@
+[
+ {
+  "from": "this year's hot carbon",
+  "to": "this year's HotCarbon"
+ },
+ {
+  "from": "the mixtural sparse mixture",
+  "to": "the Mixtral sparse mixture"
+ },
+ {
+  "from": "Again, mixful is a bit",
+  "to": "Again, Mixtral is a bit"
+ },
+ {
+  "from": "go to the Lama 270 billion model",
+  "to": "go to the Llama 2 70 billion model"
+ },
+ {
+  "from": "models like Lama 270 billion and 13 billion",
+  "to": "models like Llama 2 7 billion and 13 billion"
+ },
+ {
+  "from": "We didn't use deep speed or VLLM",
+  "to": "We didn't use DeepSpeed or vLLM"
+ },
+ {
+  "from": "workload based models for energy consumption runtime.",
+  "to": "workload based models for energy consumption and runtime."
+ }
+]

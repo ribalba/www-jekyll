@@ -1,0 +1,94 @@
+[
+ {
+  "from": "provide these functions of the service?",
+  "to": "provide these functions as a service?"
+ },
+ {
+  "from": "like open risk, which",
+  "to": "like OpenWhisk, which"
+ },
+ {
+  "from": "no open risk running",
+  "to": "no OpenWhisk running"
+ },
+ {
+  "from": "like open risk is very high",
+  "to": "like OpenWhisk is very high"
+ },
+ {
+  "from": "like OpenFisk have",
+  "to": "like OpenWhisk have"
+ },
+ {
+  "from": "uh, fast control plane",
+  "to": "uh, FaaS control plane"
+ },
+ {
+  "from": "a new fast control plane",
+  "to": "a new FaaS control plane"
+ },
+ {
+  "from": "the fast control plane",
+  "to": "the FaaS control plane"
+ },
+ {
+  "from": "do this fast control planes",
+  "to": "do this FaaS control planes"
+ },
+ {
+  "from": "the fast programming model",
+  "to": "the FaaS programming model"
+ },
+ {
+  "from": "have a fast runtime",
+  "to": "have a FaaS runtime"
+ },
+ {
+  "from": "to this fast model",
+  "to": "to this FaaS model"
+ },
+ {
+  "from": "Shepley value",
+  "to": "Shapley value"
+ },
+ {
+  "from": "with firecracker, which",
+  "to": "with Firecracker, which"
+ },
+ {
+  "from": "and firecracker is of course",
+  "to": "and Firecracker is of course"
+ },
+ {
+  "from": "Thanks, Pratik.",
+  "to": "Thanks, Prateek."
+ },
+ {
+  "from": "questions for Pratik?",
+  "to": "questions for Prateek?"
+ },
+ {
+  "from": "questions from Pratik?",
+  "to": "questions from Prateek?"
+ },
+ {
+  "from": "last question for Pratik?",
+  "to": "last question for Prateek?"
+ },
+ {
+  "from": "these three conventions presents",
+  "to": "these three dimensions presents"
+ },
+ {
+  "from": "And the control can then pick",
+  "to": "And the control plane can then pick"
+ },
+ {
+  "from": "is typically, uh, or the cold start problem",
+  "to": "is typically, uh, called the cold start problem"
+ },
+ {
+  "from": "function as a serverless platforms",
+  "to": "function as a service platforms"
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "from": "threat",
+  "to": "thread"
+ },
+ {
+  "from": "management strats also",
+  "to": "management threads also"
+ },
+ {
+  "from": "such as MemcHT, Redis, DrugsDB",
+  "to": "such as Memcached, Redis, RocksDB"
+ },
+ {
+  "from": "threshold wattage",
+  "to": "threshold voltage"
+ },
+ {
+  "from": "slower critical passes",
+  "to": "slower critical paths"
+ },
+ {
+  "from": "So, part of what articulates that",
+  "to": "So, prior work articulates that"
+ },
+ {
+  "from": "whereas PowerWork didn't",
+  "to": "whereas prior work didn't"
+ },
+ {
+  "from": "to explain our fundings",
+  "to": "to explain our findings"
+ },
+ {
+  "from": "We measure the return rate of",
+  "to": "We measure the retire rate of"
+ },
+ {
+  "from": "30% of their return rate",
+  "to": "30% of their retire rate"
+ },
+ {
+  "from": "For the entire array, the numbers",
+  "to": "For the retire rate, the numbers"
+ },
+ {
+  "from": "we measured the TCP-ICO application",
+  "to": "we measured the TCP echo application"
+ },
+ {
+  "from": "polling and TCPI core application",
+  "to": "polling and TCP echo application"
+ },
+ {
+  "from": "where the DPDK posts the NICS hardware queues",
+  "to": "where the DPDK polls the NIC's hardware queues"
+ },
+ {
+  "from": "the application and the transfer layers",
+  "to": "the application and the transport layers"
+ },
+ {
+  "from": "for the front-end backend installs",
+  "to": "for the front-end backend stalls"
+ },
+ {
+  "from": "And we paint the thread",
+  "to": "And we pin the thread"
+ },
+ {
+  "from": "the DPDK, SBK, or whatever",
+  "to": "the DPDK, SPDK, or whatever"
+ },
+ {
+  "from": "more N2N system",
+  "to": "more end-to-end system"
+ },
+ {
+  "from": "does exercise, of course, intensively",
+  "to": "does exercise cores intensively"
+ },
+ {
+  "from": "the usage of a symmetry in multi-core",
+  "to": "the usage asymmetry in multi-core"
+ }
+]

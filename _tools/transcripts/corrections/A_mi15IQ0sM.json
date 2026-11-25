@@ -1,0 +1,82 @@
+[
+ {
+  "from": "I'm Andrus Navarro-Pedregal",
+  "to": "I'm Andres Navarro-Pedregal"
+ },
+ {
+  "from": "the Hot Carbon Workshop",
+  "to": "the HotCarbon Workshop"
+ },
+ {
+  "from": "Professor Mihal Fiedma",
+  "to": "Professor Michal Friedman"
+ },
+ {
+  "from": "such as TPC energy,",
+  "to": "such as TPC-Energy,"
+ },
+ {
+  "from": "durability traders",
+  "to": "durability trade-offs"
+ },
+ {
+  "from": "TPCC",
+  "to": "TPC-C"
+ },
+ {
+  "from": "TPCH",
+  "to": "TPC-H"
+ },
+ {
+  "from": "focus on the grid-only workloads",
+  "to": "focus on the read-only workloads"
+ },
+ {
+  "from": "such as new order of payment",
+  "to": "such as new order or payment"
+ },
+ {
+  "from": "write-ahead lock",
+  "to": "write-ahead log"
+ },
+ {
+  "from": "what are these trailers and how are they architecturally implemented to understand the trailers before",
+  "to": "what are these trade-offs and how are they architecturally implemented to understand the trade-offs before"
+ },
+ {
+  "from": "it comes with several trade-ups",
+  "to": "it comes with several trade-offs"
+ },
+ {
+  "from": "enable carbon hours scheduling",
+  "to": "enable carbon-aware scheduling"
+ },
+ {
+  "from": "this software changes whole on different",
+  "to": "this software changes hold on different"
+ },
+ {
+  "from": "databases, given the same powerbook.",
+  "to": "databases, given the same hardware."
+ },
+ {
+  "from": "The third dimension is that we test in two different machines",
+  "to": "The first dimension is that we test in two different machines"
+ },
+ {
+  "from": "we can see that these graphs grow up to 620 times",
+  "to": "we can see that these gaps grow up to 620 times"
+ },
+ {
+  "from": "energy gap in every software trace that",
+  "to": "energy gap in every software choice that"
+ },
+ {
+  "from": "careful on what software traces we're making",
+  "to": "careful on what software choices we're making"
+ },
+ {
+  "from": "once we enable this energy penetration intersection,",
+  "to": "once we enable this energy per transaction,"
+ }
+]

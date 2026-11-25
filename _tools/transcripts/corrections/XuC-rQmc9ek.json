@@ -1,0 +1,126 @@
+[
+ {
+  "from": "Taku Ukamura",
+  "to": "Taku Okamura"
+ },
+ {
+  "from": "The power density of AIRX",
+  "to": "The power density of AI racks"
+ },
+ {
+  "from": "thermal and powerheader may differ",
+  "to": "thermal and power headroom may differ"
+ },
+ {
+  "from": "cubic cache reuse",
+  "to": "KV cache reuse"
+ },
+ {
+  "from": "KB cache reuse",
+  "to": "KV cache reuse"
+ },
+ {
+  "from": "polar capping",
+  "to": "power capping"
+ },
+ {
+  "from": "GPU polar consumption",
+  "to": "GPU power consumption"
+ },
+ {
+  "from": "GPU flyer",
+  "to": "GPU Fryer"
+ },
+ {
+  "from": "VLLM",
+  "to": "vLLM"
+ },
+ {
+  "from": "DCCM exporter",
+  "to": "DCGM exporter"
+ },
+ {
+  "from": "server-review metrics",
+  "to": "server-level metrics"
+ },
+ {
+  "from": "stored in pro-methods",
+  "to": "stored in Prometheus"
+ },
+ {
+  "from": "thermal-sorting",
+  "to": "thermal throttling"
+ },
+ {
+  "from": "avoids more preferred computation",
+  "to": "avoids more prefill computation"
+ },
+ {
+  "from": "liquid code LLM servings",
+  "to": "liquid-cooled LLM servings"
+ },
+ {
+  "from": "coordinates reconstructing GPU operation",
+  "to": "coordinates request routing, GPU operation"
+ },
+ {
+  "from": "Both affected GPU peers",
+  "to": "Both affected GPU pairs"
+ },
+ {
+  "from": "we derive cross-review implications",
+  "to": "we derive cross-layer implications"
+ },
+ {
+  "from": "and solitonic status",
+  "to": "and throttling status"
+ },
+ {
+  "from": "For intra-server interference, we changed the workloads on other servers",
+  "to": "For inter-server interference, we changed the workloads on other servers"
+ },
+ {
+  "from": "and intraserver interference from other servers",
+  "to": "and inter-server interference from other servers"
+ },
+ {
+  "from": "This video shows the relationship",
+  "to": "This figure shows the relationship"
+ },
+ {
+  "from": "the GPU could lead the thermal throttling threshold",
+  "to": "the GPU could reach the thermal throttling threshold"
+ },
+ {
+  "from": "The benefit was especially rich",
+  "to": "The benefit was especially large"
+ },
+ {
+  "from": "for cross-area control of",
+  "to": "for cross-layer control of"
+ },
+ {
+  "from": "should be workload-adapted",
+  "to": "should be workload-adaptive"
+ },
+ {
+  "from": "motivate a cross-air controller",
+  "to": "motivate a cross-layer controller"
+ },
+ {
+  "from": "develop an end-to-end control that",
+  "to": "develop an end-to-end controller that"
+ },
+ {
+  "from": "That's great. Our experiment",
+  "to": "That's right. Our experiment"
+ },
+ {
+  "from": "much larger impact of the manufacturing variation",
+  "to": "much larger impact than manufacturing variation"
+ },
+ {
+  "from": "the set points, temperatures, and the load",
+  "to": "the set point temperatures and the load"
+ }
+]

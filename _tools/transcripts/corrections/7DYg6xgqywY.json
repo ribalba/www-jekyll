@@ -1,0 +1,154 @@
+[
+ {
+  "from": "blackboard predator",
+  "to": "black-box predictor"
+ },
+ {
+  "from": "blackboard models",
+  "to": "black-box models"
+ },
+ {
+  "from": "profiling roms",
+  "to": "profiling runs"
+ },
+ {
+  "from": "792 profiling round",
+  "to": "792 profiling runs"
+ },
+ {
+  "from": "The GMM",
+  "to": "The GEMM"
+ },
+ {
+  "from": "its relative share force",
+  "to": "its relative share falls"
+ },
+ {
+  "from": "dominated by the catch and data movement",
+  "to": "dominated by the cache and data movement"
+ },
+ {
+  "from": "The square turns capture",
+  "to": "The square terms capture"
+ },
+ {
+  "from": "prefix sound formula",
+  "to": "prefix sum formula"
+ },
+ {
+  "from": "The preview stage",
+  "to": "The prefill stage"
+ },
+ {
+  "from": "the preview and decode phase",
+  "to": "the prefill and decode phase"
+ },
+ {
+  "from": "pre-fuel",
+  "to": "prefill"
+ },
+ {
+  "from": "previewed stage",
+  "to": "prefill stage"
+ },
+ {
+  "from": "the entire preview window",
+  "to": "the entire prefill window"
+ },
+ {
+  "from": "sum the family codes to get the total stage codes",
+  "to": "sum the family costs to get the total stage costs"
+ },
+ {
+  "from": "the codes consists",
+  "to": "the costs consists"
+ },
+ {
+  "from": "the shear scaling",
+  "to": "the shared scaling"
+ },
+ {
+  "from": "the mixing deployment scale, the mixing intercepts",
+  "to": "the missing deployment scale, the missing intercepts"
+ },
+ {
+  "from": "comes from cooling the data",
+  "to": "comes from pooling the data"
+ },
+ {
+  "from": "With pooling along,",
+  "to": "With pooling alone,"
+ },
+ {
+  "from": "we just cause 15 times lower energy",
+  "to": "we just cost 15 times lower energy"
+ },
+ {
+  "from": "three short-per-stacks",
+  "to": "three shots per stack"
+ },
+ {
+  "from": "MOE serving",
+  "to": "MoE serving"
+ },
+ {
+  "from": "we use the NSI system. And to use the NVIDIA NSI system,",
+  "to": "we use the Nsight Systems. And to use the NVIDIA Nsight Systems,"
+ },
+ {
+  "from": "the input lens.",
+  "to": "the input lengths."
+ },
+ {
+  "from": "low input landing",
+  "to": "low input length"
+ },
+ {
+  "from": "and the height one. The height one",
+  "to": "and the high one. The high one"
+ },
+ {
+  "from": "the height areas",
+  "to": "the high areas"
+ },
+ {
+  "from": "Thank you very much, Kunmin.",
+  "to": "Thank you very much, Kunming."
+ },
+ {
+  "from": "An energy-aware LLM service system",
+  "to": "An energy-aware LLM serving system"
+ },
+ {
+  "from": "pipeline of sustainable service scheduler",
+  "to": "pipeline of sustainable serving scheduler"
+ },
+ {
+  "from": "can then filter off the choices",
+  "to": "can then filter out the choices"
+ },
+ {
+  "from": "The key is the grid box and reusable rule.",
+  "to": "The key is the gray box and reusable rule."
+ },
+ {
+  "from": "our model is symmetric usable",
+  "to": "our model is semantically usable"
+ },
+ {
+  "from": "But though we have tried several ways",
+  "to": "Although we have tried several ways"
+ },
+ {
+  "from": "Energy-aware serving means the deployment-specific",
+  "to": "Energy-aware serving needs the deployment-specific"
+ },
+ {
+  "from": "those other types of hardware models?",
+  "to": "those other types of hardware platforms?"
+ },
+ {
+  "from": "And we just see one shot.",
+  "to": "And we just use one shot."
+ }
+]

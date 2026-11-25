@@ -1,0 +1,38 @@
+[
+ {
+  "from": "VESIM",
+  "to": "Vessim"
+ },
+ {
+  "from": "We built on MOSAIC, which",
+  "to": "We built on Mosaik, which"
+ },
+ {
+  "from": "a large suit of simulators",
+  "to": "a large suite of simulators"
+ },
+ {
+  "from": "battery simulators like PyBEM.",
+  "to": "battery simulators like PyBaMM."
+ },
+ {
+  "from": "Solcast and Wattime to",
+  "to": "Solcast and WattTime to"
+ },
+ {
+  "from": "So, Wattime is providing",
+  "to": "So, WattTime is providing"
+ },
+ {
+  "from": "testing carbonware applications",
+  "to": "testing carbon-aware applications"
+ },
+ {
+  "from": "And in FED0, which",
+  "to": "And in FedZero, which"
+ },
+ {
+  "from": "but we cost more than 30% less carbon emissions",
+  "to": "but we caused more than 30% less carbon emissions"
+ }
+]

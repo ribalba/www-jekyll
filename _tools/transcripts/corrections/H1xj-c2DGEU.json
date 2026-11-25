@@ -1,0 +1,134 @@
+[
+ {
+  "from": "Boris Ruff",
+  "to": "Boris Ruf"
+ },
+ {
+  "from": "connecting to hot carbon",
+  "to": "connecting to HotCarbon"
+ },
+ {
+  "from": "a lot of RAC, so retrieval augmented graphs",
+  "to": "a lot of RAG, so retrieval augmented generation"
+ },
+ {
+  "from": "long contacts",
+  "to": "long contexts"
+ },
+ {
+  "from": "pre-fuel",
+  "to": "pre-fill"
+ },
+ {
+  "from": "pre-field paradox",
+  "to": "pre-fill paradox"
+ },
+ {
+  "from": "is actually on square",
+  "to": "is actually O(n²)"
+ },
+ {
+  "from": "this O and square complexity",
+  "to": "this O(n²) complexity"
+ },
+ {
+  "from": "the N2 cost",
+  "to": "the N square cost"
+ },
+ {
+  "from": "this O2 computation cost",
+  "to": "this O(n²) computation cost"
+ },
+ {
+  "from": "those two square growth",
+  "to": "those n square growth"
+ },
+ {
+  "from": "they are sequely produced",
+  "to": "they are sequentially produced"
+ },
+ {
+  "from": "sequential 01.",
+  "to": "sequential O(1)."
+ },
+ {
+  "from": "instantiaceous",
+  "to": "instantaneous"
+ },
+ {
+  "from": "scalar dot product attention, sdpa",
+  "to": "scaled dot product attention, SDPA"
+ },
+ {
+  "from": "scalar dot product attention approach",
+  "to": "scaled dot product attention approach"
+ },
+ {
+  "from": "the BRAM to compute",
+  "to": "the VRAM to compute"
+ },
+ {
+  "from": "Token PowerBench",
+  "to": "TokenPowerBench"
+ },
+ {
+  "from": "LAMA 3.1",
+  "to": "Llama 3.1"
+ },
+ {
+  "from": "So for LAMA,",
+  "to": "So for Llama,"
+ },
+ {
+  "from": "QAN 2",
+  "to": "Qwen 2"
+ },
+ {
+  "from": "for QUAN,",
+  "to": "for Qwen,"
+ },
+ {
+  "from": "hugging phase",
+  "to": "Hugging Face"
+ },
+ {
+  "from": "the hiking phase",
+  "to": "the Hugging Face"
+ },
+ {
+  "from": "non-optimized target phase one",
+  "to": "non-optimized Hugging Face one"
+ },
+ {
+  "from": "the VLLM page retention",
+  "to": "the vLLM paged attention"
+ },
+ {
+  "from": "the page retention",
+  "to": "the paged attention"
+ },
+ {
+  "from": "NVIDIA 8 100",
+  "to": "NVIDIA A100"
+ },
+ {
+  "from": "the generate AI carbon footprint",
+  "to": "the generative AI carbon footprint"
+ },
+ {
+  "from": "power consumption for people to decode",
+  "to": "power consumption for prefill to decode"
+ },
+ {
+  "from": "from other companies use in your AI timelines?",
+  "to": "from other companies use in your AI pipelines?"
+ },
+ {
+  "from": "or are like frontiers model from other companies",
+  "to": "or are like frontier models from other companies"
+ },
+ {
+  "from": "because we'll work with, I guess, person related data",
+  "to": "because we work with, I guess, person related data"
+ }
+]

@@ -1,0 +1,150 @@
+[
+ {
+  "from": "Shui-Jing Fan",
+  "to": "Xueqing Feng"
+ },
+ {
+  "from": "Tara's query-aware",
+  "to": "Towards query-aware"
+ },
+ {
+  "from": "joins, and apparelism",
+  "to": "joins, and parallelism"
+ },
+ {
+  "from": "Intel Core RFI processor running DACDB",
+  "to": "Intel Core i5 processor running DuckDB"
+ },
+ {
+  "from": "high-precision parameter",
+  "to": "high-precision power meter"
+ },
+ {
+  "from": "We also correct top-down",
+  "to": "We also collect top-down"
+ },
+ {
+  "from": "Linux path profiler",
+  "to": "Linux perf profiler"
+ },
+ {
+  "from": "storing on the memory",
+  "to": "stalling on the memory"
+ },
+ {
+  "from": "more memory stores lengthen",
+  "to": "more memory stalls lengthen"
+ },
+ {
+  "from": "synthetic secret queries",
+  "to": "synthetic SQL queries"
+ },
+ {
+  "from": "For thought operation, we vary the thought key",
+  "to": "For sort operation, we vary the sort key"
+ },
+ {
+  "from": "Under skew 19,",
+  "to": "Under skew 90,"
+ },
+ {
+  "from": "steeper energy life",
+  "to": "steeper energy rise"
+ },
+ {
+  "from": "skill class",
+  "to": "skew class"
+ },
+ {
+  "from": "the HELLO test set",
+  "to": "the held-out test set"
+ },
+ {
+  "from": "compare the LAN policy",
+  "to": "compare the learned policy"
+ },
+ {
+  "from": "the total of idle energy",
+  "to": "the total above idle energy"
+ },
+ {
+  "from": "reduces energy by 80%",
+  "to": "reduces energy by 18%"
+ },
+ {
+  "from": "The largest production is",
+  "to": "The largest reduction is"
+ },
+ {
+  "from": "our approach type reaches",
+  "to": "our prototype reaches"
+ },
+ {
+  "from": "total above-wide energy",
+  "to": "total above-idle energy"
+ },
+ {
+  "from": "Thank you, you too. Questions?",
+  "to": "Thank you, Yuto. Questions?"
+ },
+ {
+  "from": "perf per mod",
+  "to": "perf per watt"
+ },
+ {
+  "from": "like tpch",
+  "to": "like TPC-H"
+ },
+ {
+  "from": "we are using duck tv so inductive have",
+  "to": "we are using DuckDB so in DuckDB have"
+ },
+ {
+  "from": "dedicated power processing engine",
+  "to": "dedicated parallel processing engine"
+ },
+ {
+  "from": "optimality of power processing",
+  "to": "optimality of parallel processing"
+ },
+ {
+  "from": "Yuto is going to get the talk.",
+  "to": "Yuto is going to give the talk."
+ },
+ {
+  "from": "could not attend day because of visa constraints",
+  "to": "could not attend today because of visa constraints"
+ },
+ {
+  "from": "but I can't accept your questions",
+  "to": "but I can accept your questions"
+ },
+ {
+  "from": "For example, ARMS, and Intel's P-core and E-core.",
+  "to": "For example, ARM's big.LITTLE and Intel's P-core and E-core."
+ },
+ {
+  "from": "a worker, which always schedules on any available core",
+  "to": "a worker, which OS schedules on any available core"
+ },
+ {
+  "from": "So, base-core type can be dependent",
+  "to": "So, best core type can be dependent"
+ },
+ {
+  "from": "not only on the system role or core availability",
+  "to": "not only on the system load or core availability"
+ },
+ {
+  "from": "spread into training, validation, and tested.",
+  "to": "split into training, validation, and test set."
+ },
+ {
+  "from": "if I'm designing a graph, is it better",
+  "to": "if I'm designing a rack, is it better"
+ },
+ {
+  "from": "also energy, uh, uh, overall core, uh, core allocation",
+  "to": "also energy, uh, uh, aware core, uh, core allocation"
+ }
+]

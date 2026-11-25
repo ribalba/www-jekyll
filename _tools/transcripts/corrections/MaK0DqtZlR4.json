@@ -1,0 +1,30 @@
+[
+ {
+  "from": "carried over to the next term.",
+  "to": "carried over to the next turn."
+ },
+ {
+  "from": "by Anthropics' own measurements",
+  "to": "by Anthropic's own measurements"
+ },
+ {
+  "from": "at VLM's default memory budget",
+  "to": "at vLLM's default memory budget"
+ },
+ {
+  "from": "LAMA 3.18B on VLLM",
+  "to": "Llama 3.1 8B on vLLM"
+ },
+ {
+  "from": "So VLLM keeps",
+  "to": "So vLLM keeps"
+ },
+ {
+  "from": "with the counters red at each end",
+  "to": "with the counters read at each end"
+ },
+ {
+  "from": "as a safeguard on serving ends that are prone",
+  "to": "as a safeguard on serving engines that are prone"
+ }
+]

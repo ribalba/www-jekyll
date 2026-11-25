@@ -1,0 +1,82 @@
+[
+ {
+  "from": "Wapeek Abuwalik",
+  "to": "Wafik Aboualim"
+ },
+ {
+  "from": "Wapeek will be telling",
+  "to": "Wafik will be telling"
+ },
+ {
+  "from": "me and Steven Lee",
+  "to": "me and Stephen Lee"
+ },
+ {
+  "from": "Meadow reports",
+  "to": "Meta reports"
+ },
+ {
+  "from": "you do a null gather",
+  "to": "you do an all-gather"
+ },
+ {
+  "from": "there's sensor parallelism",
+  "to": "there's tensor parallelism"
+ },
+ {
+  "from": "different batch charts",
+  "to": "different batch shards"
+ },
+ {
+  "from": "Mechatron core",
+  "to": "Megatron Core"
+ },
+ {
+  "from": "thought about GP2, LLAMA",
+  "to": "thought about GPT-2, LLAMA"
+ },
+ {
+  "from": "PP in DP2 starts",
+  "to": "PP2, DP2 starts"
+ },
+ {
+  "from": "hourly electricity maps traces",
+  "to": "hourly Electricity Maps traces"
+ },
+ {
+  "from": "for the Lama 1B model",
+  "to": "for the Llama 1B model"
+ },
+ {
+  "from": "only chooses linear configuration",
+  "to": "only chooses leaner configuration"
+ },
+ {
+  "from": "sequence parallelism and extra parallelism",
+  "to": "sequence parallelism and expert parallelism"
+ },
+ {
+  "from": "So, same thing can be set for throughput.",
+  "to": "So, same thing can be said for throughput."
+ },
+ {
+  "from": "Same thing can be set for throughput. As you can see",
+  "to": "Same thing can be said for throughput. As you can see"
+ },
+ {
+  "from": "you can only have utmost one configuration",
+  "to": "you can only have at most one configuration"
+ },
+ {
+  "from": "rather than... You can think about that. And what we also know is that",
+  "to": "rather than... We'll think about that. And we also noticed that"
+ },
+ {
+  "from": "And you were thinking maybe we can extend",
+  "to": "And we were thinking maybe we can extend"
+ },
+ {
+  "from": "feed it the distributed code in other factors",
+  "to": "feed it the distributed code and other factors"
+ }
+]

@@ -152,6 +152,12 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
 .abstract summary { cursor: pointer; font-size: .88rem; font-weight: 600; color: var(--purple); }
 .abstract p { font-size: .95rem; }
 
+/* Transcripts */
+.transcript-note { margin: 1.2rem 0 1.5rem; font-size: .88rem; color: var(--muted); }
+.transcript p { margin: 0 0 1rem; }
+.transcript .ts { display: inline-block; min-width: 3.2rem; margin-right: .4rem; font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--muted); text-decoration: none; }
+.transcript a.ts:hover { color: var(--purple); text-decoration: underline; }
+
 /* Footer */
 .site-footer { width: 100%; max-width: 76rem; margin: 0 auto; padding: 1.5rem 3.5rem 2.5rem; border-top: 1px solid var(--rule); font-size: .85rem; color: var(--muted); }
 .site-footer p { margin: 0 0 .3rem; }

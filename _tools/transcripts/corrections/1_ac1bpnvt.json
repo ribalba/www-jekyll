@@ -1,0 +1,86 @@
+[
+ {
+  "from": "a master's student at DTH.",
+  "to": "a master's student at ETH."
+ },
+ {
+  "from": "'s Fine-Grained Energy Attribution",
+  "to": ": Fine-Grained Energy Attribution"
+ },
+ {
+  "from": "EnerJet",
+  "to": "EnergAt"
+ },
+ {
+  "from": "a prototype called Energet,",
+  "to": "a prototype called EnergAt,"
+ },
+ {
+  "from": "joint work with Mihail and Theon.",
+  "to": "joint work with Michal and Theo."
+ },
+ {
+  "from": "the end of dino scaling",
+  "to": "the end of Dennard scaling"
+ },
+ {
+  "from": "considering the numeral effect",
+  "to": "considering the NUMA effect"
+ },
+ {
+  "from": "one of the primary corporates",
+  "to": "one of the primary culprits"
+ },
+ {
+  "from": "we have REPL parameters",
+  "to": "we have RAPL parameters"
+ },
+ {
+  "from": "using the rubble parameters",
+  "to": "using the RAPL parameters"
+ },
+ {
+  "from": "XVE from Xilinx",
+  "to": "XPE from Xilinx"
+ },
+ {
+  "from": "threat-level Luma-aware",
+  "to": "thread-level NUMA-aware"
+ },
+ {
+  "from": "per-threat accounting",
+  "to": "per-thread accounting"
+ },
+ {
+  "from": "per threat CPU time",
+  "to": "per thread CPU time"
+ },
+ {
+  "from": "using Gen5,",
+  "to": "using gem5,"
+ },
+ {
+  "from": "different contours have",
+  "to": "different counters have"
+ },
+ {
+  "from": "sample contours with",
+  "to": "sample counters with"
+ },
+ {
+  "from": "we sample various contours",
+  "to": "we sample various counters"
+ },
+ {
+  "from": "this like a validation estimation is",
+  "to": "this like a validation by summation is"
+ },
+ {
+  "from": "find the wrong truth",
+  "to": "find the ground truth"
+ },
+ {
+  "from": "the simulation arrow could be",
+  "to": "the simulation error could be"
+ }
+]

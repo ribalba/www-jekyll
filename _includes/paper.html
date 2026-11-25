@@ -3,7 +3,8 @@
   the same in the program. Accepts either `authors` (a string) or
   `author-list` (one "Name (Affiliation)" entry per author). `abstract`,
   `award`, `pdf`, `slides` and `video` are optional. Local PDF and slide
-  links show their file size (see _plugins/file_size.rb).
+  links show their file size (see _plugins/file_size.rb). A Transcript link
+  appears when a file in _transcripts has the same `video` URL.
 {%- endcomment -%}
 {%- assign _pp = include.paper -%}
 {%- assign _alist = _pp['author-list'] %}
@@ -15,6 +16,7 @@
     {%- if _pp.pdf %}{% assign _size = _pp.pdf | file_size %}<a href="{{ _pp.pdf | relative_url }}" target="_blank" rel="noopener">PDF{% if _size != "" %} <span class="size">{{ _size }}</span>{% endif %}</a>{% endif -%}
     {%- if _pp.slides %}{% assign _size = _pp.slides | file_size %}<a href="{{ _pp.slides | relative_url }}" target="_blank" rel="noopener">Slides{% if _size != "" %} <span class="size">{{ _size }}</span>{% endif %}</a>{% endif -%}
     {%- if _pp.video %}<a href="{{ _pp.video }}" target="_blank" rel="noopener">Video</a>{% endif -%}
+    {%- if _pp.video and _pp.video != "" %}{% assign _tr = site.transcripts | where: "video", _pp.video | first %}{% if _tr %}<a href="{{ _tr.url | relative_url }}">Transcript</a>{% endif %}{% endif -%}
   </p>
   {%- endif %}
   {%- if _pp.abstract %}

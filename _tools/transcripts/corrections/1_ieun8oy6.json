@@ -1,0 +1,46 @@
+[
+ {
+  "from": "my PhD student, Yang Zhao,",
+  "to": "my PhD student, Yiyang Zhao,"
+ },
+ {
+  "from": "given an AR test on the left",
+  "to": "given an AI task on the left"
+ },
+ {
+  "from": "this menu process of defining a search space",
+  "to": "this manual process of defining a search space"
+ },
+ {
+  "from": "understand the AIA task application domain",
+  "to": "understand the AI task application domain"
+ },
+ {
+  "from": "accuracy matrix of the architecture",
+  "to": "accuracy metrics of the architecture"
+ },
+ {
+  "from": "so for NASA,",
+  "to": "so for NAS,"
+ },
+ {
+  "from": "banana nets",
+  "to": "vanilla NAS"
+ },
+ {
+  "from": "one-shot nets",
+  "to": "one-shot NAS"
+ },
+ {
+  "from": "taking both one-shot and burning on the nets",
+  "to": "taking both one-shot and vanilla NAS"
+ },
+ {
+  "from": "y-axis is the matrix for multi-objective matrix",
+  "to": "y-axis is the metric for multi-objective metrics"
+ },
+ {
+  "from": "means that the surge efficiency",
+  "to": "means that the search efficiency"
+ }
+]

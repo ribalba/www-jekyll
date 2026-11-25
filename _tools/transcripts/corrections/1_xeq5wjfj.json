@@ -1,0 +1,34 @@
+[
+ {
+  "from": "I am Deeptaroop and",
+  "to": "I am Diptyaroop and"
+ },
+ {
+  "from": "Ben Paff, Vipen PR, Raja Gopal Srinivasan, Victor Firo, Sriram Ayer, Colleen Josephson, Zeylong Penn and Ramesh Sitaraman",
+  "to": "Ben Pfaff, Vipin PR, Rajagopal Sreenivasan, Victor Firoiu, Sreeram Iyer, Colleen Josephson, Zhelong Pan and Ramesh Sitaraman"
+ },
+ {
+  "from": "we use Wattime as a carbon intensity service",
+  "to": "we use WattTime as a carbon intensity service"
+ },
+ {
+  "from": "using ACDP requests",
+  "to": "using HTTP requests"
+ },
+ {
+  "from": "And tools like carbon cast again",
+  "to": "And tools like CarbonCast again"
+ },
+ {
+  "from": "in a production grid load balancer",
+  "to": "in a production-grade load balancer"
+ },
+ {
+  "from": "the carbon-aware GSLV,",
+  "to": "the carbon-aware GSLB,"
+ },
+ {
+  "from": "the carbon-unaware GSLV,",
+  "to": "the carbon-unaware GSLB,"
+ }
+]

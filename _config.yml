@@ -27,6 +27,12 @@ kramdown:
 plugins:
   - jekyll-sitemap
 
+# Talk transcripts, one file per video in _transcripts/YYYY/.
+# They are generated with the scripts in _tools/transcripts/.
+collections:
+  transcripts:
+    output: true
+
 defaults:
   - scope:
       path: ""
@@ -38,6 +44,12 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: transcripts
+    values:
+      layout: transcript
+      render_with_liquid: false
 
 exclude:
   - README.md

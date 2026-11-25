@@ -25,7 +25,7 @@ layout: default
     </nav>
     {%- endif %}
   </header>
-  {%- if page.edition < site.current_edition and page.section != "overview" %}
+  {%- if page.edition < site.current_edition and page.section != "overview" and page.collection != "transcripts" %}
   <p class="notice">This page belongs to HotCarbon {{ page.edition }} and is kept for reference. HotCarbon {{ site.current_edition }} is coming, see the <a href="{{ '/' | relative_url }}">home page</a> for news.</p>
   {%- endif %}
   {{ content }}

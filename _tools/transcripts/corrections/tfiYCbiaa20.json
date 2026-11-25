@@ -1,0 +1,58 @@
+[
+ {
+  "from": "measure using Rappel and NVIDIA and VML.",
+  "to": "measure using RAPL and NVIDIA NVML."
+ },
+ {
+  "from": "Rappel",
+  "to": "RAPL"
+ },
+ {
+  "from": "RUPLE",
+  "to": "RAPL"
+ },
+ {
+  "from": "We run through vast AI",
+  "to": "We run through Vast.ai"
+ },
+ {
+  "from": "for like Corsa stability points",
+  "to": "for like coarser stability points"
+ },
+ {
+  "from": "lower upper Gauss sidle",
+  "to": "lower upper Gauss-Seidel"
+ },
+ {
+  "from": "sparse metrics operations",
+  "to": "sparse matrix operations"
+ },
+ {
+  "from": "integrated NVM reported power",
+  "to": "integrated NVML reported power"
+ },
+ {
+  "from": "repeated read or stale rate for",
+  "to": "repeated read or stale reads for"
+ },
+ {
+  "from": "the problem of the state readings",
+  "to": "the problem of the stale readings"
+ },
+ {
+  "from": "we have like a 10 millisecond cooldown",
+  "to": "we have like a 10 second cooldown"
+ },
+ {
+  "from": "is over all benchmarks, is closed.",
+  "to": "is over all benchmarks, is close."
+ },
+ {
+  "from": "where you're actually used like mobile devices",
+  "to": "where you'd actually use like mobile devices"
+ },
+ {
+  "from": "it's hard to really say this is not for all GPUs",
+  "to": "it's hard to really say this is now for all GPUs"
+ }
+]
