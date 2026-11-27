@@ -4,10 +4,7 @@
   or `redirect_to` for a fixed target.
 {%- endcomment -%}
 {%- if page.redirect_section == "program" -%}
-  {%- for _ed in site.data.editions -%}
-    {%- assign _key = "y" | append: _ed.year -%}
-    {%- if site.data.program[_key] -%}{%- assign _target = "/" | append: _ed.year | append: "/#program" -%}{%- break -%}{%- endif -%}
-  {%- endfor -%}
+  {%- assign _target = "/" | append: site.current_edition | append: "/#program" -%}
 {%- elsif page.redirect_section -%}
   {%- assign _target_page = site.pages | where: "section", page.redirect_section | sort: "edition" | last -%}
   {%- assign _target = _target_page.url -%}

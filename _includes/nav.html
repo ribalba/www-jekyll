@@ -2,18 +2,15 @@
   Main navigation. The targets are computed, so nothing here has to change
   from one year to the next:
   - Call for Papers and Attend point to the newest page with that `section`.
-  - Program points to the newest edition that has a file in _data/program/.
+  - Program points to the program of `current_edition` (_config.yml). Without
+    a file in _data/program/ yet, that section says the program is coming.
   A link is only highlighted on the page it points to. Every other page of
   an older edition highlights "Past editions", which then unrolls into the
-  list of editions with the year of the page highlighted.
+  list of past editions with the year of the page highlighted.
 {%- endcomment -%}
 {%- assign _cfp = site.pages | where: "section", "cfp" | sort: "edition" | last -%}
 {%- assign _attend = site.pages | where: "section", "attend" | sort: "edition" | last -%}
-{%- assign _program_year = nil -%}
-{%- for _ed in site.data.editions -%}
-  {%- assign _key = "y" | append: _ed.year -%}
-  {%- if site.data.program[_key] -%}{%- assign _program_year = _ed.year -%}{%- break -%}{%- endif -%}
-{%- endfor -%}
+{%- assign _program_year = site.current_edition -%}
 {%- assign _on_cfp = false -%}{%- if _cfp and page.url == _cfp.url -%}{%- assign _on_cfp = true -%}{%- endif -%}
 {%- assign _on_attend = false -%}{%- if _attend and page.url == _attend.url -%}{%- assign _on_attend = true -%}{%- endif -%}
 {%- assign _on_program = false -%}{%- if page.section == "overview" and page.edition == _program_year -%}{%- assign _on_program = true -%}{%- endif -%}
@@ -37,7 +34,7 @@
 <div class="nav-sub">
   {%- for _ed in site.data.editions %}
   {%- assign _key = "y" | append: _ed.year %}
-  {%- if site.data.program[_key] %}
+  {%- if site.data.program[_key] and _ed.year < site.current_edition %}
   {%- assign _url = "/" | append: _ed.year | append: "/" %}
   <a href="{{ _url | relative_url }}"{% if _ed.year == _past_year %} aria-current="{% if page.url == _url %}page{% else %}true{% endif %}"{% endif %}>{{ _ed.year }}</a>
   {%- endif %}
