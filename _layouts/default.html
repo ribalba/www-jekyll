@@ -26,6 +26,12 @@
         {% include nav.html %}
       </nav>
     </details>
+    {%- comment -%}
+      Pages of past editions open the list of years under "Past editions"
+      (see nav.html, which sets _past_year). The next edition box would
+      follow that list and read like one more year, so it is left out there.
+    {%- endcomment %}
+    {%- unless page.url == "/past/" or _past_year %}
     <div class="side-edition">
       <p class="side-label">Next edition</p>
       <p class="side-year">HotCarbon {{ _current.year }}</p>
@@ -38,6 +44,7 @@
       <p>Dates and location to be announced.</p>
       {%- endif %}
     </div>
+    {%- endunless %}
   </aside>
   <div class="main-col">
     <main id="content">
