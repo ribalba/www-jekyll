@@ -3,6 +3,9 @@
   from one year to the next:
   - Call for Papers and Attend point to the newest page with that `section`.
   - Program points to the newest edition that has a file in _data/program/.
+  A link is only highlighted on the page it points to. Every other page of
+  an older edition highlights "Past editions", which then unrolls into the
+  list of editions with the year of the page highlighted.
 {%- endcomment -%}
 {%- assign _cfp = site.pages | where: "section", "cfp" | sort: "edition" | last -%}
 {%- assign _attend = site.pages | where: "section", "attend" | sort: "edition" | last -%}
@@ -11,15 +14,33 @@
   {%- assign _key = "y" | append: _ed.year -%}
   {%- if site.data.program[_key] -%}{%- assign _program_year = _ed.year -%}{%- break -%}{%- endif -%}
 {%- endfor -%}
+{%- assign _on_cfp = false -%}{%- if _cfp and page.url == _cfp.url -%}{%- assign _on_cfp = true -%}{%- endif -%}
+{%- assign _on_attend = false -%}{%- if _attend and page.url == _attend.url -%}{%- assign _on_attend = true -%}{%- endif -%}
+{%- assign _on_program = false -%}{%- if page.section == "overview" and page.edition == _program_year -%}{%- assign _on_program = true -%}{%- endif -%}
+{%- assign _past_year = nil -%}
+{%- if page.edition and page.edition != site.current_edition -%}
+  {%- unless _on_cfp or _on_attend or _on_program -%}{%- assign _past_year = page.edition -%}{%- endunless -%}
+{%- endif -%}
 <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
 {%- if _cfp %}
-<a href="{{ _cfp.url | relative_url }}"{% if page.section == "cfp" %} aria-current="page"{% endif %}>Call for Papers</a>
+<a href="{{ _cfp.url | relative_url }}"{% if _on_cfp %} aria-current="page"{% endif %}>Call for Papers</a>
 {%- endif %}
 {%- if _program_year %}
-<a href="{{ '/' | append: _program_year | append: '/#program' | relative_url }}"{% if page.section == "overview" %} aria-current="page"{% endif %}>Program</a>
+<a href="{{ '/' | append: _program_year | append: '/#program' | relative_url }}"{% if _on_program %} aria-current="page"{% endif %}>Program</a>
 {%- endif %}
 {%- if _attend %}
-<a href="{{ _attend.url | relative_url }}"{% if page.section == "attend" %} aria-current="page"{% endif %}>Attend</a>
+<a href="{{ _attend.url | relative_url }}"{% if _on_attend %} aria-current="page"{% endif %}>Attend</a>
 {%- endif %}
 <a href="{{ '/organizers/' | relative_url }}"{% if page.url == "/organizers/" %} aria-current="page"{% endif %}>Organizers</a>
-<a href="{{ '/past/' | relative_url }}"{% if page.url == "/past/" %} aria-current="page"{% endif %}>Past editions</a>
+<a href="{{ '/past/' | relative_url }}"{% if page.url == "/past/" %} aria-current="page"{% elsif _past_year %} class="nav-open"{% endif %}>Past editions</a>
+{%- if page.url == "/past/" or _past_year %}
+<div class="nav-sub">
+  {%- for _ed in site.data.editions %}
+  {%- assign _key = "y" | append: _ed.year %}
+  {%- if site.data.program[_key] %}
+  {%- assign _url = "/" | append: _ed.year | append: "/" %}
+  <a href="{{ _url | relative_url }}"{% if _ed.year == _past_year %} aria-current="{% if page.url == _url %}page{% else %}true{% endif %}"{% endif %}>{{ _ed.year }}</a>
+  {%- endif %}
+  {%- endfor %}
+</div>
+{%- endif %}

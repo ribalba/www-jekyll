@@ -49,6 +49,10 @@ a:hover { color: #8a2a9c; }
 }
 .site-nav a:hover { background: rgba(255,255,255,.08); color: #fff; }
 .site-nav a[aria-current] { background: rgba(253,253,134,.12); color: var(--yellow); }
+/* On pages of an older edition "Past editions" unrolls into the list of years */
+.site-nav a.nav-open, .menu-panel a.nav-open { color: var(--yellow); }
+.nav-sub { display: flex; flex-direction: column; margin: .1rem 0 .35rem .15rem; padding-left: .6rem; border-left: 1px solid rgba(255,255,255,.2); }
+.site-nav .nav-sub a { margin: 0 -.75rem 0 0; padding: .3rem .75rem; font-size: .92rem; }
 
 .side-edition { padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.15); font-size: .9rem; }
 .side-edition p { margin: 0 0 .4rem; }
@@ -219,6 +223,7 @@ code { font-size: .9em; background: var(--purple-soft); padding: .05em .3em; bor
   .menu-panel a + a { margin-top: .1rem; }
   .menu-panel a:hover { background: rgba(255,255,255,.08); color: #fff; }
   .menu-panel a[aria-current] { background: rgba(253,253,134,.12); color: var(--yellow); }
+  .menu-panel .nav-sub a { padding: .5rem .75rem; font-size: 1rem; }
   .side-edition { display: none; }
   main { padding: 2rem 1.25rem 3rem; }
   .paper { display: block; }
